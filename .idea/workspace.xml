@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98e04d51-7f9c-413c-9c3d-202c3c80a36f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaintForm.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PaintForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TESTER.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/paintingTrial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CAB302Paint/Painting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CAB302Paint/Painting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Painting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Painting.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,13 +19,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TESTER.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="626">
-              <caret line="194" column="16" selection-start-line="194" selection-start-column="16" selection-end-line="194" selection-end-column="29" />
+            <state relative-caret-position="2176">
+              <caret line="131" column="56" selection-start-line="131" selection-start-column="56" selection-end-line="131" selection-end-column="56" />
               <folding>
-                <element signature="e#0#6842#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="method#mousePressed#0;class#MouseLocator#0;class#TESTER#0" />
                 <element signature="method#mouseReleased#0;class#MouseLocator#0;class#TESTER#0" />
@@ -37,11 +35,25 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/paintingTrial.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1473#1474#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Painting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="-54">
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -52,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PaintForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+            <state relative-caret-position="65">
+              <caret line="42" selection-start-line="42" selection-end-line="74" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#mousePressed#0;class#MouseLocator#0;class#PaintForm#0" />
@@ -94,13 +106,15 @@
         <option value="$PROJECT_DIR$/src/please.java" />
         <option value="$PROJECT_DIR$/src/Painting.java" />
         <option value="$PROJECT_DIR$/src/TESTER.java" />
+        <option value="$PROJECT_DIR$/src/paintingTrial.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
-    <option name="width" value="1614" />
-    <option name="height" value="876" />
+    <option name="y" value="-12" />
+    <option name="width" value="1000" />
+    <option name="height" value="960" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -110,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,6 +140,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -147,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TESTER">
+  <component name="RunManager" selected="Application.paintingTrial">
     <configuration name="PaintForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PaintForm" />
       <module name="CAB302Paint" />
@@ -169,8 +183,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="paintingTrial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="paintingTrial" />
+      <module name="CAB302Paint" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.paintingTrial" />
         <item itemvalue="Application.TESTER" />
         <item itemvalue="Application.TESTER" />
         <item itemvalue="Application.PaintForm" />
@@ -192,8 +214,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1513" height="973" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2563574" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27216494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -203,14 +226,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977462" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.19691578" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39976275" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.15776987" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32977462" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32977462" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -255,10 +278,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TESTER.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="131" column="56" selection-start-line="131" selection-start-column="56" selection-end-line="131" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#mousePressed#0;class#MouseLocator#0;class#TESTER#0" />
+            <element signature="method#mouseReleased#0;class#MouseLocator#0;class#TESTER#0" />
+            <element signature="method#mouseEntered#0;class#MouseLocator#0;class#TESTER#0" />
+            <element signature="method#mouseExited#0;class#MouseLocator#0;class#TESTER#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Painting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/PaintForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="49" column="18" lean-forward="true" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+        <state relative-caret-position="65">
+          <caret line="42" selection-start-line="42" selection-end-line="74" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#mousePressed#0;class#MouseLocator#0;class#PaintForm#0" />
@@ -269,27 +316,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Painting.java">
+    <entry file="file://$PROJECT_DIR$/src/paintingTrial.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="273">
+          <caret line="46" column="28" lean-forward="true" selection-start-line="46" selection-start-column="28" selection-end-line="46" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TESTER.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="194" column="16" selection-start-line="194" selection-start-column="16" selection-end-line="194" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#6842#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="method#mousePressed#0;class#MouseLocator#0;class#TESTER#0" />
-            <element signature="method#mouseReleased#0;class#MouseLocator#0;class#TESTER#0" />
-            <element signature="method#mouseEntered#0;class#MouseLocator#0;class#TESTER#0" />
-            <element signature="method#mouseExited#0;class#MouseLocator#0;class#TESTER#0" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1473#1474#0" expanded="true" />
           </folding>
         </state>
       </provider>
