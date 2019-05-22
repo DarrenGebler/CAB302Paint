@@ -1,4 +1,5 @@
 
+
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -6,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.BorderFactory;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.geom.Ellipse2D;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -27,6 +29,15 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     JButton btPolygonBtn;
     JComboBox cmbColourCmbo;
     JTextField tfHexText;
+
+    String shape = "Line";
+    String colorStr;
+
+    int x1;
+    int x2;
+    int y1;
+    int y2;
+    int count = 0;
 
     JPanel pnCanvasPanel;
     /**
@@ -139,6 +150,9 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.weighty = 0;
         gbcPanel0.anchor = GridBagConstraints.EAST;
         gbPanel0.setConstraints( cmbColourCmbo, gbcPanel0 );
+        cmbColourCmbo.addActionListener(this);
+        Object colourInd = cmbColourCmbo.getSelectedItem();
+        colorStr = colourInd.toString();
         pnPanel0.add( cmbColourCmbo );
 
         tfHexText = new JTextField( );
@@ -193,20 +207,49 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     public void mouseClicked(MouseEvent e) {
         Graphics2D g = (Graphics2D) c.getGraphics();
 
-        g.setColor(Color.red);
+        System.out.println(colorStr);
 
-        int x,y;
-        x = e.getX();
-        y = e.getY();
+        g.setColor(Color.getColor(colorStr));
 
+//        int x,y;
+        count = count +1;
+        if (count%2 == 0) {
+            x2 = e.getX();
+            y2 = e.getY();
+        }
+        else {
+            x1 = e.getX();
+            y1 = e.getY();
+        }
 
-        g.fillOval(x,y,5,5);
+        switch (shape) {
+            case "Plot":
+                g.fillOval(x1,y1,1,1);
+                break;
+            case "Rectangle":
+                g.drawRect(x1,y1,5,5);
+                break;
+            case "Ellipse":
+                g.draw(new Ellipse2D.Double(x1,y1,5,5));
+                break;
+//            case "Polygon":
+//                g.drawPolygon();
+        }
+
     }
     public void mousePressed(MouseEvent e) {
-
     }
     public void mouseReleased(MouseEvent e) {
-
+        count = count+1;
+        if (count%2 == 1) {
+            x1 = e.getX();
+            y1 = e.getY();
+        }
+        else {
+            x2 = e.getX();
+            y2 = e.getY();
+        }
+        System.out.println(e);
     }
     public void mouseEntered(MouseEvent e) {
 
@@ -217,14 +260,20 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     public void mouseDragged(MouseEvent e) {
         Graphics2D g = (Graphics2D) c.getGraphics();
 
-        g.setColor(Color.red);
+        g.setColor(Color.getColor(colorStr));
 
-        int x,y;
-        x = e.getX();
-        y = e.getY();
+//        System.out.println(e);
+
+        x2 = e.getX();
+        y2 = e.getY();
+
+        if (shape == "Line" ) {
+            g.drawLine(x1,y1,(x2),(y2));
+            System.out.println("Line");
+        }
 
 
-        g.fillOval(x,y,5,5);
+//        g.fillOval(x,y,5,5);
     }
     public void mouseMoved(MouseEvent e) {
 
@@ -247,19 +296,24 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
 //        System.out.println(e);
 
         String x = e.paramString();
+        String y = e.getActionCommand();
         if (x.contains("Line")) {
-            System.out.println(x);
+            shape = "Line";
         }
         else if (x.contains("Plot")) {
-
+            shape = "Plot";
         }
         else if (x.contains("Rectangle")) {
-
+            shape = "Rectangle";
         }
         else if (x.contains("Ellipse")) {
-
+            shape = "Ellipse";
         }
         else if (x.contains("Polygon")) {
+            shape = "Polygon";
+        }
+
+        if(y.contains("Changed")) {
 
         }
 
