@@ -6,6 +6,7 @@ import javax.swing.BorderFactory;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -36,6 +37,8 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     int y1;
     int y2;
     int count = 0;
+
+    boolean dragging;
 
     JPanel pnCanvasPanel;
     /**
@@ -205,46 +208,52 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         System.out.println(colorStr);
 
         g.setColor(Color.getColor(colorStr));
-
-//        int x,y;
-        count = count +1;
-        if (count%2 == 0) {
-            x2 = e.getX();
-            y2 = e.getY();
-        }
-        else {
-            x1 = e.getX();
-            y1 = e.getY();
-        }
+    }
+    public void mousePressed(MouseEvent e) {
+        dragging = true;
+        x1 = e.getX();
+        y1 = e.getY();
+        System.out.println("X1 = " + x1 + "Y1 = " +y1);
+    }
+    public void mouseReleased(MouseEvent e) {
+        Graphics2D g = (Graphics2D) c.getGraphics();
+        dragging = false;
+        x2 = e.getX();
+        y2 = e.getY();
+        System.out.println("X2 = " + x2 + "Y2 = " +y2);
 
         switch (shape) {
-            case "Plot":
-                g.fillOval(x1,y1,1,1);
+            case "Line":
+                g.drawLine(x1,y1,x2,y2);
                 break;
             case "Rectangle":
-                g.drawRect(x1,y1,5,5);
+                if (x1 == x2) {
+                    g.drawRect(x1,y1,2,2);
+                }
+                else if (x1<x2 && y1<y2) {
+                    g.drawRect(x1,y1,(x2-x1),(y2-y1));
+                }
+                else if (x1>x2 && y1>y2){
+                    g.drawRect(x2,y2,(x1-x2),(y1-y2));
+                }
+                else if (x1>x2 && y1<y2) {
+                    g.drawRect(x2,y1,(x1-x2),(y2-y1));
+                }
+                else {
+                    g.drawRect(x1,y2,(x2-x1),(y1-y2));
+                }
                 break;
             case "Ellipse":
                 g.draw(new Ellipse2D.Double(x1,y1,5,5));
                 break;
-//            case "Polygon":
-//                g.drawPolygon();
-        }
-
-    }
-    public void mousePressed(MouseEvent e) {
-    }
-    public void mouseReleased(MouseEvent e) {
-        count = count+1;
-        if (count%2 == 1) {
-            x1 = e.getX();
-            y1 = e.getY();
-        }
-        else {
-            x2 = e.getX();
-            y2 = e.getY();
-        }
-        System.out.println(e);
+            case "Plot":
+                g.fillOval(x1,y1,2,2);
+                break;
+//          case "Polygon"
+//              g.drawPolygon();
+            }
+        x2 = 0;
+        y2 = 0;
     }
     public void mouseEntered(MouseEvent e) {
 
@@ -256,19 +265,10 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         Graphics2D g = (Graphics2D) c.getGraphics();
 
         g.setColor(Color.getColor(colorStr));
+        dragging = true;
 
 //        System.out.println(e);
 
-        x2 = e.getX();
-        y2 = e.getY();
-
-        if (shape == "Line" ) {
-            g.drawLine(x1,y1,(x2),(y2));
-            System.out.println("Line");
-        }
-
-
-//        g.fillOval(x,y,5,5);
     }
     public void mouseMoved(MouseEvent e) {
 
@@ -310,8 +310,6 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
 
         if (x.contains("Colours")) {
             ColourPicker c = new ColourPicker();
-            System.out.println("BOW");
-
             c.createAndShowGUI();
 
 

@@ -5,8 +5,9 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/FrontEnd/GUI" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Canvas" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/BackEnd/ColourPicker" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FrontEnd/ColourPicker" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BackEnd/Canvas1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BackEnd/Canvas" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

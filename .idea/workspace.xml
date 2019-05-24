@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="98e04d51-7f9c-413c-9c3d-202c3c80a36f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/ColourPicker/ColourPicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CAB302Paint.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CAB302Paint.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canvas/canvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/Canvas/canvas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/GUI/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/GUI/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CAB302Paint/ColourPicker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CAB302Paint/ColourPicker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CAB302Paint/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CAB302Paint/GUI$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CAB302Paint/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CAB302Paint/GUI.class" afterDir="false" />
     </list>
@@ -21,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FrontEnd/GUI/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1095">
-              <caret line="152" column="38" lean-forward="true" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+            <state relative-caret-position="422">
+              <caret line="242" column="52" selection-start-line="242" selection-start-column="52" selection-end-line="242" selection-end-column="52" />
               <folding>
                 <element signature="method#mouseEntered#0;class#GUI#0" />
                 <element signature="method#mouseExited#0;class#GUI#0" />
@@ -35,23 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Canvas/canvas.java">
+        <entry file="file://$PROJECT_DIR$/BackEnd/Canvas/canvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="6" column="80" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="80" />
+            <state relative-caret-position="473">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1300#1301#0" expanded="true" />
@@ -98,8 +87,10 @@
         <option value="$PROJECT_DIR$/Canvas/canvas.java" />
         <option value="$PROJECT_DIR$/ColourPicker/ColourPicker.java" />
         <option value="$PROJECT_DIR$/GUI/GUI.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/GUI/GUI.java" />
         <option value="$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java" />
+        <option value="$PROJECT_DIR$/BackEnd/Canvas/Canvas.java" />
+        <option value="$PROJECT_DIR$/BackEnd/Canvas/canvas.java" />
+        <option value="$PROJECT_DIR$/FrontEnd/GUI/GUI.java" />
       </list>
     </option>
   </component>
@@ -133,11 +124,6 @@
               <item name="CAB302Paint" type="b2602c69:ProjectViewProjectNode" />
               <item name="CAB302Paint" type="462c0819:PsiDirectoryNode" />
               <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
-              <item name="ColourPicker" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CAB302Paint" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAB302Paint" type="462c0819:PsiDirectoryNode" />
               <item name="Canvas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -166,8 +152,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\BackEnd" />
       <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\FrontEnd" />
+      <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\BackEnd" />
       <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\Canvas" />
       <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\GUI" />
     </key>
@@ -333,10 +319,27 @@
     <entry file="file://$PROJECT_DIR$/CAB302Paint.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canvas/canvas.java">
+    <entry file="file://$PROJECT_DIR$/BackEnd/Canvas1/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="80" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="80" />
+        <state>
+          <caret lean-forward="true" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FrontEnd/ColourPicker/ColourPicker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-462">
+          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BackEnd/Canvas/canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1300#1301#0" expanded="true" />
@@ -347,22 +350,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FrontEnd/GUI/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1095">
-          <caret line="152" column="38" lean-forward="true" selection-start-line="152" selection-start-column="38" selection-end-line="152" selection-end-column="38" />
+        <state relative-caret-position="422">
+          <caret line="242" column="52" selection-start-line="242" selection-start-column="52" selection-end-line="242" selection-end-column="52" />
           <folding>
             <element signature="method#mouseEntered#0;class#GUI#0" />
             <element signature="method#mouseExited#0;class#GUI#0" />
             <element signature="method#mouseMoved#0;class#GUI#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
