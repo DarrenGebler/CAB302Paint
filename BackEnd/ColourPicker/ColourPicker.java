@@ -78,10 +78,10 @@ public class ColourPicker extends JPanel implements ChangeListener {
      * this method should be invoked from the
      * event-dispatching thread.
      */
-    private static void createAndShowGUI() {
+    public static void createAndShowGUI() {
         //Create and set up the window.
         JFrame frame = new JFrame("ColorChooserDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         //Create and set up the content pane.
         JComponent newContentPane = new ColourPicker();

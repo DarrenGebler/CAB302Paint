@@ -1,5 +1,3 @@
-
-
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -27,7 +25,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     JButton btRectBtn;
     JButton btEllipseBtn;
     JButton btPolygonBtn;
-    JComboBox cmbColourCmbo;
+    JButton btColourBtn;
     JTextField tfHexText;
 
     String shape = "Line";
@@ -139,21 +137,18 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         btPolygonBtn.addActionListener(this);
         pnPanel0.add( btPolygonBtn );
 
-        String []dataColourCmbo = { "WHITE", "BLACK", "RED", "BLUE", "YELLOW" };
-        cmbColourCmbo = new JComboBox( dataColourCmbo );
-        gbcPanel0.gridx = 0;
+        btColourBtn = new JButton("Colours");
+        gbcPanel0.gridx=0;
         gbcPanel0.gridy = 10;
         gbcPanel0.gridwidth = 4;
-        gbcPanel0.gridheight = 1;
+        gbcPanel0.gridheight = 2;
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
         gbcPanel0.anchor = GridBagConstraints.EAST;
-        gbPanel0.setConstraints( cmbColourCmbo, gbcPanel0 );
-        cmbColourCmbo.addActionListener(this);
-        Object colourInd = cmbColourCmbo.getSelectedItem();
-        colorStr = colourInd.toString();
-        pnPanel0.add( cmbColourCmbo );
+        gbPanel0.setConstraints( btColourBtn, gbcPanel0 );
+        btColourBtn.addActionListener(this);
+        pnPanel0.add( btColourBtn );
 
         tfHexText = new JTextField( );
         gbcPanel0.gridx = 0;
@@ -313,7 +308,12 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
             shape = "Polygon";
         }
 
-        if(y.contains("Changed")) {
+        if (x.contains("Colours")) {
+            ColourPicker c = new ColourPicker();
+            System.out.println("BOW");
+
+            c.createAndShowGUI();
+
 
         }
 
