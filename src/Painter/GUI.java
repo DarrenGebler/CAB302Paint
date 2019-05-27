@@ -1,3 +1,4 @@
+package Painter;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -82,7 +83,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( btLineBtn, gbcPanel0 );
         btLineBtn.addActionListener(this);
         pnPanel0.add( btLineBtn );
@@ -95,7 +96,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( btPlotBtn, gbcPanel0 );
         btPlotBtn.addActionListener(this::actionPerformed);
         pnPanel0.add( btPlotBtn );
@@ -108,7 +109,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( btRectBtn, gbcPanel0 );
         btRectBtn.addActionListener(this::actionPerformed);
         pnPanel0.add( btRectBtn );
@@ -121,7 +122,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( btEllipseBtn, gbcPanel0 );
         btEllipseBtn.addActionListener(this);
         pnPanel0.add( btEllipseBtn );
@@ -134,7 +135,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( btPolygonBtn, gbcPanel0 );
         btPolygonBtn.addActionListener(this);
         pnPanel0.add( btPolygonBtn );
@@ -147,7 +148,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( btColourBtn, gbcPanel0 );
         btColourBtn.addActionListener(this);
         pnPanel0.add( btColourBtn );
@@ -160,7 +161,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( tfHexText, gbcPanel0 );
         pnPanel0.add( tfHexText );
 
@@ -172,7 +173,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 1;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( chbxFill, gbcPanel0 );
         chbxFill.addItemListener(this);
         pnPanel0.add(chbxFill);
@@ -185,25 +186,23 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbcPanel0.fill = GridBagConstraints.BOTH;
         gbcPanel0.weightx = 2;
         gbcPanel0.weighty = 0;
-        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbcPanel0.anchor = GridBagConstraints.WEST;
         gbPanel0.setConstraints( lblFill, gbcPanel0 );
         pnPanel0.add(lblFill);
 
-//        pnCanvasPanel = new JPanel();
-//        pnCanvasPanel.setBorder( BorderFactory.createTitledBorder( "Canvas" ) );
-//        GridBagLayout gbCanvasPanel = new GridBagLayout();
-//        GridBagConstraints gbcCanvasPanel = new GridBagConstraints();
-//        pnCanvasPanel.setLayout( gbCanvasPanel );
-//        gbcPanel0.gridx = 0;
-//        gbcPanel0.gridy = 1;
-//        gbcPanel0.gridwidth = 28;
-//        gbcPanel0.gridheight = 19;
-//        gbcPanel0.fill = GridBagConstraints.BOTH;
-//        gbcPanel0.weightx = 1;
-//        gbcPanel0.weighty = 0;
-//        gbcPanel0.anchor = GridBagConstraints.NORTH;
-//        gbPanel0.setConstraints( pnCanvasPanel, gbcPanel0 );
-//        pnCanvasPanel.setPreferredSize(new Dimension(640,480) );
+        MenuBar menu = new MenuBar();
+        Menu file = new Menu("File");
+        Menu edit = new Menu("Edit");
+        Menu help = new Menu("Help");
+        file.add(new MenuItem("New", new MenuShortcut(1)));
+        file.add(new MenuItem("Open", new MenuShortcut(2)));
+        file.add(new MenuItem("Save", new MenuShortcut(3)));
+        file.add(new MenuItem("Export As", new MenuShortcut(4)));
+        edit.add(new MenuItem("Undo", new MenuShortcut(5)));
+        menu.add(file);
+        menu.add(edit);
+        menu.add(help);
+        this.setMenuBar(menu);
 
         c = new Canvas(){
             public void paint(Graphics2D g){
@@ -218,7 +217,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
 
         c.setPreferredSize(new Dimension(640,480));
 
-        pnPanel0.add( c );
+        pnPanel0.add(c);
 
         setDefaultCloseOperation( EXIT_ON_CLOSE );
 
@@ -313,7 +312,7 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
                 break;
 //          case "Polygon"
 //              g.drawPolygon();
-            }
+        }
         x2 = 0;
         y2 = 0;
     }
@@ -371,6 +370,9 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         if (x.contains("Colours")) {
             ColourPicker c = new ColourPicker();
             c.createAndShowGUI();
+            colourChoice = c.please;
+            System.out.println(colourChoice);
+//            colourChoice = c.returnCol();
         }
 
     }

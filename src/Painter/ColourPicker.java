@@ -1,3 +1,5 @@
+package Painter;
+
 /*
  * Copyright (c) 1995, 2008, Oracle and/or its affiliates. All rights reserved.
  *
@@ -42,7 +44,8 @@ public class ColourPicker extends JPanel implements ChangeListener {
     protected JColorChooser tcc;
     protected JLabel banner;
 
-    Color finalColor;
+    public Color please;
+
     GUI g = new GUI();
 
     public ColourPicker() {
@@ -77,9 +80,9 @@ public class ColourPicker extends JPanel implements ChangeListener {
         banner.setForeground(newColor);
     }
 
-    public Color returnCol() {
-        return finalColor;
-    }
+//    public Color returnCol() {
+//        return finalColor;
+//    }
     /**
      * Create the GUI and show it.  For thread safety,
      * this method should be invoked from the

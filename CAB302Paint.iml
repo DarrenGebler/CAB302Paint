@@ -8,6 +8,8 @@
       <sourceFolder url="file://$MODULE_DIR$/FrontEnd/ColourPicker" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BackEnd/Canvas1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/BackEnd/Canvas" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FrontEnd/Shapes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/FrontEnd" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
