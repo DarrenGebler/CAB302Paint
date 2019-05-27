@@ -1,7 +1,6 @@
 package Painter.Shapes;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
 import java.util.Observable;
@@ -26,6 +25,17 @@ public abstract class Shapes extends Observable implements ShapesElement{
         this.filled = filled;
         this.outlined = outlined;
         this.outterColor = outterColor;
+    }
+
+    public Shapes(Points start, Color colour, Stroke stroke) {
+        this.start = start;
+        this.colour = colour;
+        this.stroke = stroke;
+    }
+
+    public Shapes(Points start, Color colour) {
+        this.start = start;
+        this.colour = colour;
     }
 
     public void setColour(Color colour) {
@@ -74,7 +84,7 @@ public abstract class Shapes extends Observable implements ShapesElement{
         return start;
     }
 
-    public void accept(ShapeElementVisitor visitor) {
+    public void accept(ShapesElementVisitor visitor) {
         this.accept(visitor);
         visitor.visit(this);
     }

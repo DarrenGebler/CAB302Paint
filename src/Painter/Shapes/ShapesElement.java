@@ -1,5 +1,5 @@
 package Painter.Shapes;
 
 public interface ShapesElement {
-    void accept(ShapeElementVisitor visitor);
+    void accept(ShapesElementVisitor visitor);
 }

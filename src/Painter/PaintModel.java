@@ -47,9 +47,6 @@ public class PaintModel extends Observable{
         this.pointer.setColour(Color.LIGHT_GRAY);
         this.pointer.setStart(p);
         this.pointer.setRadius(w+1);
-        if (this.current == "Eraser") {
-            this.pointer.setRadius(w*4);
-        }
         if (this.current == "Bucket") {
             this.pointer.setColour(Color.LIGHT_GRAY);
         }
@@ -87,10 +84,16 @@ public class PaintModel extends Observable{
         return strokeWidth;
     }
 
+    /**
+     * @param strokeWidth
+     */
     public void setStrokeWidth(int strokeWidth) {
         this.strokeWidth = strokeWidth;
     }
 
+    /**
+     * @return filled
+     */
     public Boolean getFilled() {
         return filled;
     }

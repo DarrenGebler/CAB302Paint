@@ -1,13 +1,10 @@
 package Painter.Shapes;
 
 import java.awt.Color;
-import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
 
 import Painter.Points;
-import Painter.PaintModel;
-
 
 
 public class Circle extends Shapes{
@@ -107,7 +104,7 @@ public class Circle extends Shapes{
     }
 
     @Override
-    public void accept(ShapeElementVisitor visitor) {
+    public void accept(ShapesElementVisitor visitor) {
         visitor.visit(this);
     }
 
