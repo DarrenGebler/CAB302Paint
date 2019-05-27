@@ -42,6 +42,9 @@ public class ColourPicker extends JPanel implements ChangeListener {
     protected JColorChooser tcc;
     protected JLabel banner;
 
+    Color finalColor;
+    GUI g = new GUI();
+
     public ColourPicker() {
         super(new BorderLayout());
 
@@ -70,9 +73,13 @@ public class ColourPicker extends JPanel implements ChangeListener {
 
     public void stateChanged(ChangeEvent e) {
         Color newColor = tcc.getColor();
+        g.retCol(tcc.getColor());
         banner.setForeground(newColor);
     }
 
+    public Color returnCol() {
+        return finalColor;
+    }
     /**
      * Create the GUI and show it.  For thread safety,
      * this method should be invoked from the
@@ -93,13 +100,13 @@ public class ColourPicker extends JPanel implements ChangeListener {
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
-        //Schedule a job for the event-dispatching thread:
-        //creating and showing this application's GUI.
-        javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
-                createAndShowGUI();
-            }
-        });
-    }
+//    public static void main(String[] args) {
+//        //Schedule a job for the event-dispatching thread:
+//        //creating and showing this application's GUI.
+//        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+//            public void run() {
+//                createAndShowGUI();
+//            }
+//        });
+//    }
 }

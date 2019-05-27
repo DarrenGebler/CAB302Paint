@@ -1,20 +1,14 @@
-import javax.swing.JFrame;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.JPanel;
-import javax.swing.BorderFactory;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JTextField;
+
 /**
  * @author  Administrator
  * @created May 21, 2019
  */
-public class GUI extends JFrame implements MouseListener, MouseMotionListener, MouseWheelListener, ActionListener
+public class GUI extends JFrame implements MouseListener, MouseMotionListener, MouseWheelListener, ActionListener, ItemListener
 {
     static GUI gui;
 
@@ -28,6 +22,8 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     JButton btPolygonBtn;
     JButton btColourBtn;
     JTextField tfHexText;
+    JCheckBox chbxFill;
+    JLabel lblFill;
 
     String shape = "Line";
     String colorStr;
@@ -39,6 +35,9 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     int count = 0;
 
     boolean dragging;
+    boolean fill = false;
+
+    Color colourChoice = Color.BLACK;
 
     JPanel pnCanvasPanel;
     /**
@@ -165,6 +164,31 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         gbPanel0.setConstraints( tfHexText, gbcPanel0 );
         pnPanel0.add( tfHexText );
 
+        chbxFill = new JCheckBox();
+        gbcPanel0.gridx=2;
+        gbcPanel0.gridy = 14;
+        gbcPanel0.gridwidth = 1;
+        gbcPanel0.gridheight = 1;
+        gbcPanel0.fill = GridBagConstraints.BOTH;
+        gbcPanel0.weightx = 1;
+        gbcPanel0.weighty = 0;
+        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbPanel0.setConstraints( chbxFill, gbcPanel0 );
+        chbxFill.addItemListener(this);
+        pnPanel0.add(chbxFill);
+
+        lblFill = new JLabel("Fill");
+        gbcPanel0.gridx=0;
+        gbcPanel0.gridy = 14;
+        gbcPanel0.gridwidth = 2;
+        gbcPanel0.gridheight = 1;
+        gbcPanel0.fill = GridBagConstraints.BOTH;
+        gbcPanel0.weightx = 2;
+        gbcPanel0.weighty = 0;
+        gbcPanel0.anchor = GridBagConstraints.EAST;
+        gbPanel0.setConstraints( lblFill, gbcPanel0 );
+        pnPanel0.add(lblFill);
+
 //        pnCanvasPanel = new JPanel();
 //        pnCanvasPanel.setBorder( BorderFactory.createTitledBorder( "Canvas" ) );
 //        GridBagLayout gbCanvasPanel = new GridBagLayout();
@@ -221,33 +245,71 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         x2 = e.getX();
         y2 = e.getY();
         System.out.println("X2 = " + x2 + "Y2 = " +y2);
+        g.setColor(colourChoice);
 
         switch (shape) {
             case "Line":
                 g.drawLine(x1,y1,x2,y2);
                 break;
             case "Rectangle":
-                if (x1 == x2) {
-                    g.drawRect(x1,y1,2,2);
-                }
-                else if (x1<x2 && y1<y2) {
-                    g.drawRect(x1,y1,(x2-x1),(y2-y1));
-                }
-                else if (x1>x2 && y1>y2){
-                    g.drawRect(x2,y2,(x1-x2),(y1-y2));
-                }
-                else if (x1>x2 && y1<y2) {
-                    g.drawRect(x2,y1,(x1-x2),(y2-y1));
+                if (fill == false) {
+                    if (x1 == x2) {
+                        g.drawRect(x1, y1, 2, 2);
+                    } else if (x1 < x2 && y1 < y2) {
+                        g.drawRect(x1, y1, (x2 - x1), (y2 - y1));
+                    } else if (x1 > x2 && y1 > y2) {
+                        g.drawRect(x2, y2, (x1 - x2), (y1 - y2));
+                    } else if (x1 > x2 && y1 < y2) {
+                        g.drawRect(x2, y1, (x1 - x2), (y2 - y1));
+                    } else {
+                        g.drawRect(x1, y2, (x2 - x1), (y1 - y2));
+                    }
                 }
                 else {
-                    g.drawRect(x1,y2,(x2-x1),(y1-y2));
+                    if (x1 == x2) {
+                        g.fillRect(x1, y1, 2, 2);
+                    } else if (x1 < x2 && y1 < y2) {
+                        g.fillRect(x1, y1, (x2 - x1), (y2 - y1));
+                    } else if (x1 > x2 && y1 > y2) {
+                        g.fillRect(x2, y2, (x1 - x2), (y1 - y2));
+                    } else if (x1 > x2 && y1 < y2) {
+                        g.fillRect(x2, y1, (x1 - x2), (y2 - y1));
+                    } else {
+                        g.fillRect(x1, y2, (x2 - x1), (y1 - y2));
+                    }
                 }
                 break;
             case "Ellipse":
-                g.draw(new Ellipse2D.Double(x1,y1,5,5));
+                if (!fill) {
+                    if (x1 == x2) {
+                        g.draw(new Ellipse2D.Double(x1, y1, 2, 2));
+                    } else if (x1 < x2 && y1 < y2) {
+                        g.draw(new Ellipse2D.Double(x1, y1, (x2 - x1), (y2 - y1)));
+                    } else if (x1 > x2 && y1 > y2) {
+                        g.draw(new Ellipse2D.Double(x2, y2, (x1 - x2), (y1 - y2)));
+                    } else if (x1 > x2 && y1 < y2) {
+                        g.draw(new Ellipse2D.Double(x2, y1, (x1 - x2), (y2 - y1)));
+                    } else {
+                        g.draw(new Ellipse2D.Double(x1, y2, (x2 - x1), (y1 - y2)));
+                    }
+                }
+                else if (fill){
+                    if (x1 == x2) {
+                        g.fill(new Ellipse2D.Double(x1, y1, 2, 2));
+                    } else if (x1 < x2 && y1 < y2) {
+                        g.fill(new Ellipse2D.Double(x1, y1, (x2 - x1), (y2 - y1)));
+                    } else if (x1 > x2 && y1 > y2) {
+                        g.fill(new Ellipse2D.Double(x2, y2, (x1 - x2), (y1 - y2)));
+                    } else if (x1 > x2 && y1 < y2) {
+                        g.fill(new Ellipse2D.Double(x2, y1, (x1 - x2), (y2 - y1)));
+                    } else {
+                        g.fill(new Ellipse2D.Double(x1, y2, (x2 - x1), (y1 - y2)));
+                    }
+                }
+
                 break;
             case "Plot":
-                g.fillOval(x1,y1,2,2);
+                g.fillOval(x2,y2,2,2);
                 break;
 //          case "Polygon"
 //              g.drawPolygon();
@@ -266,8 +328,6 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
 
         g.setColor(Color.getColor(colorStr));
         dragging = true;
-
-//        System.out.println(e);
 
     }
     public void mouseMoved(MouseEvent e) {
@@ -288,10 +348,11 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
     }
     //Button Pressed function used for changing brush type
     public void actionPerformed(ActionEvent e) {
-//        System.out.println(e);
+        System.out.println(e);
 
         String x = e.paramString();
         String y = e.getActionCommand();
+
         if (x.contains("Line")) {
             shape = "Line";
         }
@@ -307,13 +368,25 @@ public class GUI extends JFrame implements MouseListener, MouseMotionListener, M
         else if (x.contains("Polygon")) {
             shape = "Polygon";
         }
-
         if (x.contains("Colours")) {
             ColourPicker c = new ColourPicker();
             c.createAndShowGUI();
-
-
         }
 
+    }
+
+    public void retCol (Color c) {
+        colourChoice = c;
+    }
+
+    public void itemStateChanged(ItemEvent e) {
+        int x = e.getStateChange();
+        System.out.println(colourChoice);
+        if (x == 1) {
+            fill = true;
+        }
+        else {
+            fill = false;
+        }
     }
 }
