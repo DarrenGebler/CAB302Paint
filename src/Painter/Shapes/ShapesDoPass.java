@@ -73,12 +73,4 @@ public class ShapesDoPass implements ShapesPass {
         ellipse.draw(g);
     }
 
-    /**
-     * Free draw when called
-     * @param freeDraw
-     */
-    @Override
-    public void visit(FreeDraw freeDraw) {
-        freeDraw.draw(g);
-    }
 }

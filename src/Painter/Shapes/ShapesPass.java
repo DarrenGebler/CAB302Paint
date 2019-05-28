@@ -42,13 +42,6 @@ public interface ShapesPass {
      */
     void visit(Rectangle rectangle);
 
-
-    /**
-     * Free Draw Pass
-     * @param freeDraw
-     */
-    void visit(FreeDraw freeDraw);
-
     /**
      * Plot Pass
      * @param plot

@@ -42,7 +42,7 @@ public abstract class Shapes extends Observable implements ShapesElement{
 
     /**
      * Assigning Passed Properties Variables to Shape Properties
-     * Shapes: Line, FreeDraw, PolygonLine
+     * Shapes: Line, PolygonLine
      * @param start
      * @param colour
      * @param stroke

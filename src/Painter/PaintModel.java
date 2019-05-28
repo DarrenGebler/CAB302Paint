@@ -11,7 +11,7 @@ import Painter.Shapes.Circle;
 import Painter.Shapes.Shapes;
 
 /**
- * 
+ *
  */
 
 public class PaintModel extends Observable{
