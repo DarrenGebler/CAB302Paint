@@ -18,13 +18,13 @@ public abstract class Shapes extends Observable implements ShapesElement{
     protected Boolean finished = false;
 
 
-    public Shapes(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outterColor) {
+    public Shapes(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outerColour) {
         this.start = start;
         this.colour = colour;
         this.stroke = stroke;
         this.filled = filled;
         this.outlined = outlined;
-        this.outterColor = outterColor;
+        this.outterColor = outerColour;
     }
 
     public Shapes(Points start, Color colour, Stroke stroke) {

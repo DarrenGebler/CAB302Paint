@@ -35,7 +35,17 @@ public class ShapesElementDoVisitor implements ShapesElementVisitor {
     }
 
     @Override
+    public void visit(Rectangle rectangle) {
+        rectangle.draw(g);
+    }
+
+    @Override
     public void visit(Ellipse ellipse){
         ellipse.draw(g);
+    }
+
+    @Override
+    public void visit(FreeDraw freeDraw) {
+        freeDraw.draw(g);
     }
 }

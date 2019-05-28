@@ -6,7 +6,7 @@ import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
 public class Ellipse extends Shapes{
-    private int radius;
+//    private int radius;
     protected Points Origin;
     protected  Points finalPoint;
 

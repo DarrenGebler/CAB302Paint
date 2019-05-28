@@ -10,6 +10,11 @@ import java.util.Observable;
 import Painter.Shapes.Circle;
 import Painter.Shapes.Shapes;
 
+/**
+ * Drawing Parameters
+ * @param
+ */
+
 public class PaintModel extends Observable{
     private Circle pointer = new Circle(new Points(0,0), Color.LIGHT_GRAY, new BasicStroke(1), false,false,Color.GRAY);
     private DrawStack drawStack = new DrawStack();
@@ -47,9 +52,6 @@ public class PaintModel extends Observable{
         this.pointer.setColour(Color.LIGHT_GRAY);
         this.pointer.setStart(p);
         this.pointer.setRadius(w+1);
-        if (this.current == "Bucket") {
-            this.pointer.setColour(Color.LIGHT_GRAY);
-        }
         this.setChanged();
         this.notifyObservers();
     }
