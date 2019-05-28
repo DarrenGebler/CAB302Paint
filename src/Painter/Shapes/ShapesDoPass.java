@@ -4,6 +4,7 @@ import java.awt.*;
 
 /**
  *  Functions called when drawing
+ * @author Darren Gebler, James Hassett
  */
 
 public class ShapesDoPass implements ShapesPass {
@@ -18,36 +19,64 @@ public class ShapesDoPass implements ShapesPass {
     public void visit(Shapes shapes) {
     }
 
+    /**
+     * Draw circle when called
+     * @param circle
+     */
     @Override
     public void visit(Circle circle) {
         circle.draw(g);
     }
 
+    /**
+     * Draw line when called
+     * @param line
+     */
     @Override
     public void visit(Line line) {
         line.draw(g);
     }
 
+    /**
+     * Draw plot when called
+     * @param plot
+     */
     @Override
     public void visit(Plot plot) {
         plot.draw(g);
     }
 
+    /**
+     * Draw polygon line when called
+     * @param polygonLine
+     */
     @Override
     public void visit(PolygonLine polygonLine) {
         polygonLine.draw(g);
     }
 
+    /**
+     * Draw rectangle when called
+     * @param rectangle
+     */
     @Override
     public void visit(Rectangle rectangle) {
         rectangle.draw(g);
     }
 
+    /**
+     * Draw ellipse when called
+     * @param ellipse
+     */
     @Override
     public void visit(Ellipse ellipse){
         ellipse.draw(g);
     }
 
+    /**
+     * Free draw when called
+     * @param freeDraw
+     */
     @Override
     public void visit(FreeDraw freeDraw) {
         freeDraw.draw(g);

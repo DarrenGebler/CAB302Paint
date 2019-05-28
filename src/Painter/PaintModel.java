@@ -11,8 +11,7 @@ import Painter.Shapes.Circle;
 import Painter.Shapes.Shapes;
 
 /**
- * Drawing Parameters
- * @param
+ * 
  */
 
 public class PaintModel extends Observable{
