@@ -3,24 +3,22 @@ package Painter.Shapes;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
-
 import Painter.Points;
 
+/**
+ * Circle Drawing Logic
+ * @author Darren Gebler, James Hassett
+ */
 
 public class Circle extends Shapes{
     private int radius;
 
     /**
-     * Circle object to be made
-     *
+     * Circle Shape Properties
      * @param start
-     *            middle Points
      * @param colour
-     *            color that the circle will be
      * @param stroke
-     *            stroke of the shape
      * @param filled
-     *            whether shape is filled
      */
     public Circle(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outlineColor) {
         super(start, colour, stroke, filled, outlined, outlineColor);
@@ -28,6 +26,7 @@ public class Circle extends Shapes{
     }
 
     /**
+     * Returns radius of Circle
      * @return radius of the circle
      */
     public int getRadius() {
@@ -35,8 +34,7 @@ public class Circle extends Shapes{
     }
 
     /**
-     * @param radius
-     *            the new radius of the circle
+     * @param radius the new radius of the circle
      */
     public void setRadius(int radius) {
         this.radius = radius;
@@ -44,11 +42,8 @@ public class Circle extends Shapes{
 
     /**
      * Calculate the radius of the circle
-     *
-     * @param x
-     *            x coordinate
-     * @param y
-     *            y coordinate
+     * @param x coordinate
+     * @param y coordinate
      */
     public void calculateRadius(int x, int y) {
         this.radius = (int) Math
@@ -72,6 +67,11 @@ public class Circle extends Shapes{
         return topleft;
     }
 
+    /**
+     * Drawing circle shape
+     * with calculations
+     * @param g
+     */
     @Override
     public void draw(Graphics2D g) {
 
@@ -83,11 +83,11 @@ public class Circle extends Shapes{
         if (super.getFilled()) {
             g.fillOval(x, y, width, width);
             if (super.getOutlined()) {
-                g.setColor(super.getOutterColor());
+                g.setColor(super.getOuterColour());
                 g.drawOval(x, y, width, width);
             }
         } else if (super.getOutlined()) {
-            g.setColor(super.getOutterColor());
+            g.setColor(super.getOuterColour());
             g.drawOval(x, y, width, width);
         } else {
             g.drawOval(x, y, width, width);
@@ -95,6 +95,10 @@ public class Circle extends Shapes{
 
     }
 
+    /**
+     * Calculates the circle to draw
+     * @param p
+     */
     @Override
     public void calcForDraw(Points p) {
         this.calculateRadius(p.getX(), p.getY());
@@ -103,11 +107,18 @@ public class Circle extends Shapes{
 
     }
 
+    /**
+     * Pass Shape to ShapeElement Interface
+     * @param shapesPass
+     */
     @Override
-    public void accept(ShapesElementVisitor visitor) {
-        visitor.visit(this);
+    public void accept(ShapesPass shapesPass) {
+        shapesPass.visit(this);
     }
 
+    /**
+     * Set finished state
+     */
     @Override
     public void setFinished() {
         this.finished = true;

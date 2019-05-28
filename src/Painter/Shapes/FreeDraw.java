@@ -5,15 +5,31 @@ import Painter.Points;
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ * Free Drawing Logic
+ * @author Darren Gebler, James Hassett
+ */
+
 public class FreeDraw extends Shapes {
     ArrayList<Points> points;
 
+    /**
+     * Free draw shape properties
+     * @param start
+     * @param colour
+     * @param stroke
+     */
     public FreeDraw(Points start, Color colour, Stroke stroke) {
         super(start, colour, stroke);
         points = new ArrayList<Points>();
         points.add(start);
     }
 
+    /**
+     * Drawing free draw shape
+     * with calculations
+     * @param g
+     */
     public void draw(Graphics2D g) {
         g.setColor(this.getColour());
         g.setStroke(this.getStroke());
@@ -24,14 +40,25 @@ public class FreeDraw extends Shapes {
         }
     }
 
+    /**
+     * Calculates points to draw
+     * @param p
+     */
     public void calcForDraw(Points p ) {
         points.add(p);
     }
 
-    public void accept(ShapesElementVisitor visitor) {
-        visitor.visit(this);
+    /**
+     * Pass shape to ShapeElement Interface
+     * @param shapesPass
+     */
+    public void accept(ShapesPass shapesPass) {
+        shapesPass.visit(this);
     }
 
+    /**
+     * Set finished state
+     */
     public void setFinished() {
         this.finished = true;
     }

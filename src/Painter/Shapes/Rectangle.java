@@ -43,12 +43,12 @@ public class Rectangle extends Shapes{
         if (super.getFilled()) {
             g.fillRect(x,y,w,h);
             if (super.getOutlined()) {
-                g.setColor(super.getOutterColor());
+                g.setColor(super.getOuterColour());
                 g.drawRect(x,y,w,h);
             }
         }
         else if (super.getOutlined()) {
-            g.setColor(super.getOutterColor());
+            g.setColor(super.getOuterColour());
             g.drawRect(x,y,w,h);
         }
         else {
@@ -63,8 +63,8 @@ public class Rectangle extends Shapes{
         this.getStart().setY(Math.min(p.getY(), this.Origin.getY()));
     }
 
-    public void accept(ShapesElementVisitor visitor) {
-        visitor.visit(this);
+    public void accept(ShapesPass shapesPass) {
+        shapesPass.visit(this);
     }
 
     public void setFinished() {

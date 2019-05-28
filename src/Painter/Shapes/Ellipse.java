@@ -1,14 +1,29 @@
 package Painter.Shapes;
 
+import java.awt.Color;
+import java.awt.Graphics2D;
+import java.awt.Stroke;
 import Painter.Points;
 
-import java.awt.*;
-import java.awt.geom.Ellipse2D;
+/**
+ * Ellipse Drawing Logic
+ * @author Darren Gebler, James Hassett
+ */
 
 public class Ellipse extends Shapes{
-//    private int radius;
+
     protected Points Origin;
     protected  Points finalPoint;
+
+    /**
+     * Ellipse Shape Properties
+     * @param start
+     * @param colour
+     * @param stroke
+     * @param filled
+     * @param outlined
+     * @param outterColour
+     */
 
     public Ellipse(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outterColour) {
         super(start, colour, stroke, filled, outlined, outterColour);
@@ -16,22 +31,27 @@ public class Ellipse extends Shapes{
         this.Origin = new Points(start.getX(), start.getY());
     }
 
-//    public int getRadius() {
-//        return this.radius;
-//    }
-//
-//    public void setRadius(int radius) {
-//        this.radius = radius;
-//    }
 
+    /**
+     * Returns width of Ellipse
+     * @return width
+     */
     public int getWidth() {
         return this.getFinal().getX() - this.getStart().getX();
     }
 
+    /**
+     * Returns height of Ellipse
+     * @return height
+     */
     public int getHeight() {
         return this.getFinal().getY() - this.getStart().getY();
     }
 
+    /**
+     * Returns initial, mouse pressed, starting Points
+     * @return initial x, y Points
+     */
     public Points getStart() {
         int x = this.getStart().getX();
         int y = this.getStart().getY();
@@ -39,14 +59,28 @@ public class Ellipse extends Shapes{
         return initPos;
     }
 
+    /**
+     * Returns final, mouse released, Points
+     * @return final x, y Points
+     */
+
     public Points getFinal() {
         return this.finalPoint;
     }
 
+    /**
+     * Sets final Point
+     * @param p
+     */
     public void setFinalPoint(Points p) {
         this.finalPoint = p;
     }
 
+    /**
+     * Drawing ellipse Shape
+     * with calculations
+     * @param g
+     */
     @Override
     public void draw(Graphics2D g) {
         g.setStroke(this.getStroke());
@@ -58,12 +92,12 @@ public class Ellipse extends Shapes{
         if (super.getFilled()){
             g.fillOval(x,y,width,height);
             if (super.getOutlined()){
-                g.setColor(super.getOutterColor());
+                g.setColor(super.getOuterColour());
                 g.drawOval(x,y,width,height);
             }
         }
         else if (super.getOutlined()) {
-            g.setColor(super.getOutterColor());
+            g.setColor(super.getOuterColour());
             g.drawOval(x,y,width,height);
         }
         else {
@@ -71,6 +105,10 @@ public class Ellipse extends Shapes{
         }
     }
 
+    /**
+     * Calculates Ellipse to draw
+     * @param p
+     */
     public void calcForDraw(Points p) {
         this.getFinal().setX(Math.max(p.getX(), this.Origin.getX()));
         this.getFinal().setY(Math.max(p.getY(), this.Origin.getY()));
@@ -78,10 +116,17 @@ public class Ellipse extends Shapes{
         this.getStart().setY(Math.min(p.getY(), this.Origin.getX()));
     }
 
-    public void accept(ShapesElementVisitor visitor) {
-        visitor.visit(this);
+    /**
+     * Pass shape to ShapeElement Interface
+     * @param shapesPass
+     */
+    public void accept(ShapesPass shapesPass) {
+        shapesPass.visit(this);
     }
 
+    /**
+     * Set finished state
+     */
     public void setFinished() {
         this.finished = true;
     }

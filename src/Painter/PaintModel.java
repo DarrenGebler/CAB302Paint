@@ -26,6 +26,11 @@ public class PaintModel extends Observable{
     private int strokeWidth = 2;
     private Stroke stroke = new BasicStroke(2,BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);
 
+
+    /**
+     *
+     * @param s
+     */
     public void addShape(Shapes s) {
         drawStack.addShapes(s);
         this.setChanged();

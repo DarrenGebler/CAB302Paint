@@ -75,8 +75,8 @@ public class PolygonLine extends Shapes{
         return this.numLines - 1;
     }
 
-    public void accept(ShapesElementVisitor visitor) {
-        visitor.visit(this);
+    public void accept(ShapesPass shapesPass) {
+        shapesPass.visit(this);
     }
 
     public void setFinished() {

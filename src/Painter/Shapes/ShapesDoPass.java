@@ -2,11 +2,15 @@ package Painter.Shapes;
 
 import java.awt.*;
 
-public class ShapesElementDoVisitor implements ShapesElementVisitor {
+/**
+ *  Functions called when drawing
+ */
+
+public class ShapesDoPass implements ShapesPass {
 
     static Graphics2D g;
 
-    public ShapesElementDoVisitor(Graphics2D g) {
+    public ShapesDoPass(Graphics2D g) {
         this.g = g;
     }
 
