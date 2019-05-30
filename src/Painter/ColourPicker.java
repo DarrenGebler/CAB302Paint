@@ -34,10 +34,8 @@ package Painter;
 //package components;
 
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
-import javax.swing.colorchooser.*;
 
 public class ColourPicker extends JPanel implements ChangeListener {
 
@@ -46,7 +44,7 @@ public class ColourPicker extends JPanel implements ChangeListener {
 
     public Color please;
 
-    GUI g = new GUI();
+    GUI_OLD g = new GUI_OLD();
 
     public ColourPicker() {
         super(new BorderLayout());
