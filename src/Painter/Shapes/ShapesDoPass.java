@@ -16,7 +16,7 @@ public class ShapesDoPass implements ShapesPass {
     }
 
     @Override
-    public void visit(Shapes shapes) {
+    public void pass(Shapes shapes) {
     }
 
     /**
@@ -24,7 +24,7 @@ public class ShapesDoPass implements ShapesPass {
      * @param circle
      */
     @Override
-    public void visit(Circle circle) {
+    public void pass(Circle circle) {
         circle.draw(g);
     }
 
@@ -33,7 +33,7 @@ public class ShapesDoPass implements ShapesPass {
      * @param line
      */
     @Override
-    public void visit(Line line) {
+    public void pass(Line line) {
         line.draw(g);
     }
 
@@ -42,7 +42,7 @@ public class ShapesDoPass implements ShapesPass {
      * @param plot
      */
     @Override
-    public void visit(Plot plot) {
+    public void pass(Plot plot) {
         plot.draw(g);
     }
 
@@ -51,7 +51,7 @@ public class ShapesDoPass implements ShapesPass {
      * @param polygonLine
      */
     @Override
-    public void visit(PolygonLine polygonLine) {
+    public void pass(PolygonLine polygonLine) {
         polygonLine.draw(g);
     }
 
@@ -60,7 +60,7 @@ public class ShapesDoPass implements ShapesPass {
      * @param rectangle
      */
     @Override
-    public void visit(Rectangle rectangle) {
+    public void pass(Rectangle rectangle) {
         rectangle.draw(g);
     }
 
@@ -69,7 +69,7 @@ public class ShapesDoPass implements ShapesPass {
      * @param ellipse
      */
     @Override
-    public void visit(Ellipse ellipse){
+    public void pass(Ellipse ellipse){
         ellipse.draw(g);
     }
 

@@ -131,7 +131,7 @@ public abstract class Shapes extends Observable implements ShapesElement{
      */
     public void accept(ShapesPass shapesPass) {
         this.accept(shapesPass);
-        shapesPass.visit(this);
+        shapesPass.pass(this);
     }
 
     /**

@@ -104,7 +104,7 @@ public class Rectangle extends Shapes{
      * @param shapesPass
      */
     public void accept(ShapesPass shapesPass) {
-        shapesPass.visit(this);
+        shapesPass.pass(this);
     }
 
     /**

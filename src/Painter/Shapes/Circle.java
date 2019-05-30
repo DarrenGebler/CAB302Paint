@@ -110,7 +110,7 @@ public class Circle extends Shapes{
      */
     @Override
     public void accept(ShapesPass shapesPass) {
-        shapesPass.visit(this);
+        shapesPass.pass(this);
     }
 
     /**

@@ -10,42 +10,42 @@ public interface ShapesPass {
      * Shapes pass
      * @param  shapes
      */
-    void visit(Shapes shapes);
+    void pass(Shapes shapes);
 
     /**
      * Circle Pass
      * @param circle
      */
-    void visit(Circle circle);
+    void pass(Circle circle);
 
     /**
      * Ellipse Pass
      * @param ellipse
      */
-    void visit(Ellipse ellipse);
+    void pass(Ellipse ellipse);
 
     /**
      * Line Pass
      * @param line
      */
-    void visit(Line line);
+    void pass(Line line);
 
     /**
      * Polygon Line Pass
      * @param polygonLine
      */
-    void visit(PolygonLine polygonLine);
+    void pass(PolygonLine polygonLine);
 
     /**
      * Rectangle Pass
      * @param rectangle
      */
-    void visit(Rectangle rectangle);
+    void pass(Rectangle rectangle);
 
     /**
      * Plot Pass
      * @param plot
      */
-    void visit(Plot plot);
+    void pass(Plot plot);
 
 }

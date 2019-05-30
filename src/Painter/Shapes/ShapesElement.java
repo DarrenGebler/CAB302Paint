@@ -7,7 +7,7 @@ package Painter.Shapes;
 
 public interface ShapesElement {
     /**
-     * @param visitor
+     * @param shapePass
      */
-    void accept(ShapesPass visitor);
+    void accept(ShapesPass shapePass);
 }
