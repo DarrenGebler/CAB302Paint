@@ -1,9 +1,7 @@
 package Painter;
 
-import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Stroke;
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -15,15 +13,14 @@ import Painter.Shapes.Shapes;
  */
 
 public class PaintModel extends Observable{
-    private Circle pointer = new Circle(new Points(0,0), Color.LIGHT_GRAY, new BasicStroke(1), false,false,Color.GRAY);
+    private Circle pointer = new Circle(new Points(0,0), Color.LIGHT_GRAY, false,false,Color.GRAY);
     private DrawStack drawStack = new DrawStack();
     private String current = "Circle";
     private Color colour = Color.BLACK;
     private Boolean filled = false;
     private Boolean outlined = false;
     private Color outlineColour = Color.BLACK;
-    private int strokeWidth = 2;
-    private Stroke stroke = new BasicStroke(2,BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);
+
 
 
     /**
@@ -125,22 +122,6 @@ public class PaintModel extends Observable{
     }
 
     /**
-     * Returns stroke width
-     * @return stroke width
-     */
-    public int getStrokeWidth() {
-        return strokeWidth;
-    }
-
-    /**
-     * Pass stroke width
-     * @param strokeWidth
-     */
-    public void setStrokeWidth(int strokeWidth) {
-        this.strokeWidth = strokeWidth;
-    }
-
-    /**
      * Returns filled state
      * @return filled true/false
      */
@@ -186,22 +167,5 @@ public class PaintModel extends Observable{
      */
     public void setOutlineColour(Color outlineColour) {
         this.outlineColour = outlineColour;
-    }
-
-    /**
-     * Returns stroke
-     * @return stroke
-     */
-    public Stroke getStroke() {
-        return stroke;
-    }
-
-    /**
-     * Set stroke
-     * @param w
-     */
-    public void setStroke(int w) {
-        this.strokeWidth = w;
-        this.stroke = new BasicStroke(w, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND);
     }
 }

@@ -14,7 +14,6 @@ import Painter.PaintModel;
 
 public abstract class Shapes extends Observable implements ShapesElement{
     private Color colour;
-    private Stroke stroke;
     private Points start;
     private Boolean filled = false;
     private Boolean outlined = false;
@@ -26,15 +25,13 @@ public abstract class Shapes extends Observable implements ShapesElement{
      * Shapes: Rectangle, Ellipse, Circle
      * @param start
      * @param colour
-     * @param stroke
      * @param filled
      * @param outlined
      * @param outerColour
      */
-    public Shapes(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outerColour) {
+    public Shapes(Points start, Color colour, Boolean filled, Boolean outlined, Color outerColour) {
         this.start = start;
         this.colour = colour;
-        this.stroke = stroke;
         this.filled = filled;
         this.outlined = outlined;
         this.outerColour = outerColour;
@@ -43,19 +40,6 @@ public abstract class Shapes extends Observable implements ShapesElement{
     /**
      * Assigning Passed Properties Variables to Shape Properties
      * Shapes: Line, PolygonLine
-     * @param start
-     * @param colour
-     * @param stroke
-     */
-    public Shapes(Points start, Color colour, Stroke stroke) {
-        this.start = start;
-        this.colour = colour;
-        this.stroke = stroke;
-    }
-
-    /**
-     * Assigning Passed Properties Variables to Shape Properties
-     * Shapes: Plot
      * @param start
      * @param colour
      */
@@ -115,21 +99,6 @@ public abstract class Shapes extends Observable implements ShapesElement{
      */
     public Boolean getOutlined() {
         return this.outlined;
-    }
-
-    /**
-     * Sets Line Thickness
-     * @param stroke
-     */
-    public void setStroke(Stroke stroke) {
-        this.stroke = stroke;
-    }
-
-    /**
-     * @return Stroke thickness
-     */
-    public Stroke getStroke() {
-        return this.stroke;
     }
 
     /**

@@ -2,7 +2,6 @@ package Painter.Shapes;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Stroke;
 import Painter.Points;
 
 /**
@@ -17,11 +16,10 @@ public class Circle extends Shapes{
      * Circle Shape Properties
      * @param start
      * @param colour
-     * @param stroke
      * @param filled
      */
-    public Circle(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outlineColor) {
-        super(start, colour, stroke, filled, outlined, outlineColor);
+    public Circle(Points start, Color colour, Boolean filled, Boolean outlined, Color outlineColor) {
+        super(start, colour, filled, outlined, outlineColor);
         this.radius = 0;
     }
 
@@ -76,7 +74,6 @@ public class Circle extends Shapes{
     public void draw(Graphics2D g) {
 
         g.setColor(this.getColour());
-        g.setStroke(this.getStroke());
         int x = this.getLeftCorner().getX();
         int y = this.getLeftCorner().getY();
         int width = this.getWidth();

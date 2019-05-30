@@ -18,13 +18,12 @@ public class Rectangle extends Shapes{
      * Rectangle Shape properties
      * @param start
      * @param colour
-     * @param stroke
      * @param filled
      * @param outlined
      * @param outerColour
      */
-    public Rectangle(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outerColour) {
-        super(start,colour,stroke,filled,outlined,outerColour);
+    public Rectangle(Points start, Color colour, Boolean filled, Boolean outlined, Color outerColour) {
+        super(start,colour,filled,outlined,outerColour);
         this.Origin = new Points(start.getX(), start.getY());
         this.finalPoint = new Points(start.getX(), start.getY());
     }
@@ -69,7 +68,6 @@ public class Rectangle extends Shapes{
     @Override
     public void draw(Graphics2D g) {
         g.setColor(this.getColour());
-        g.setStroke(this.getStroke());
         int x = this.getStart().getX();
         int y = this.getStart().getY();
         int w = this.getWidth();

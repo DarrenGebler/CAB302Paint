@@ -55,7 +55,6 @@ public class Canvas extends JPanel implements Observer, MouseMotionListener, Mou
             shapes.accept(new ShapesDoPass(g2));
         }
 
-        g2.setStroke(new BasicStroke(paintModel.getStrokeWidth()));
         paintModel.getPointer().draw(g2);
         g2.dispose();
     }
@@ -75,7 +74,7 @@ public class Canvas extends JPanel implements Observer, MouseMotionListener, Mou
      * @param e
      */
     public void mouseMoved(MouseEvent e) {
-        paintModel.changePointer(new Points(e.getX(), e.getY()), paintModel.getStrokeWidth());
+        paintModel.changePointer(new Points(e.getX(), e.getY()), 2);
     }
 
     /**
@@ -85,7 +84,7 @@ public class Canvas extends JPanel implements Observer, MouseMotionListener, Mou
      */
     public void mouseDragged(MouseEvent e) {
         if(shapes != null && e.getButton() != MouseEvent.BUTTON3) {
-            paintModel.changePointer(new Points(e.getX(), e.getY()), paintModel.getStrokeWidth());
+            paintModel.changePointer(new Points(e.getX(), e.getY()), 2);
             shapes.calcForDraw(new Points(e.getX(), e.getY()));
             shapes.addToModel(paintModel);
         }
@@ -105,8 +104,8 @@ public class Canvas extends JPanel implements Observer, MouseMotionListener, Mou
     public void mousePressed(MouseEvent e) {
         Points start = new Points(e.getX(), e.getY());
         if(shapes == null) {
-            shapes = drawShape.getShape(paintModel.getCurrent(), start, paintModel.getColour(), paintModel.getStroke(),
-                    paintModel.getFilled(), paintModel.getStrokeWidth(), paintModel.getOutlined(), paintModel.getOutlineColour(), this);
+            shapes = drawShape.getShape(paintModel.getCurrent(), start, paintModel.getColour(),
+                    paintModel.getFilled(), paintModel.getOutlined(), paintModel.getOutlineColour(), this);
         }
         else {
             if(e.getButton() == MouseEvent.BUTTON3) {

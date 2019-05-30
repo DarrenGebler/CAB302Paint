@@ -2,7 +2,6 @@ package Painter.Shapes;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.Stroke;
 import Painter.Points;
 
 /**
@@ -19,14 +18,13 @@ public class Ellipse extends Shapes{
      * Ellipse Shape Properties
      * @param start
      * @param colour
-     * @param stroke
      * @param filled
      * @param outlined
      * @param outterColour
      */
 
-    public Ellipse(Points start, Color colour, Stroke stroke, Boolean filled, Boolean outlined, Color outterColour) {
-        super(start, colour, stroke, filled, outlined, outterColour);
+    public Ellipse(Points start, Color colour, Boolean filled, Boolean outlined, Color outterColour) {
+        super(start, colour, filled, outlined, outterColour);
         this.finalPoint = new Points(start.getX(), start.getY());
         this.Origin = new Points(start.getX(), start.getY());
     }
@@ -83,7 +81,6 @@ public class Ellipse extends Shapes{
      */
     @Override
     public void draw(Graphics2D g) {
-        g.setStroke(this.getStroke());
         g.setColor(this.getColour());
         int x = this.getStart().getX();
         int y = this.getStart().getY();

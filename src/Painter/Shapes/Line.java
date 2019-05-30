@@ -15,10 +15,9 @@ public class Line extends Shapes {
      * Line shape properties
      * @param start
      * @param colour
-     * @param stroke
      */
-    public Line(Points start, Color colour, Stroke stroke) {
-        super(start, colour, stroke);
+    public Line(Points start, Color colour) {
+        super(start, colour);
     }
 
     /**
@@ -29,7 +28,6 @@ public class Line extends Shapes {
     @Override
     public void draw(Graphics2D g) {
         g.setColor(this.getColour());
-        g.setStroke(this.getStroke());
         g.drawLine(this.getStart().getX(), this.getStart().getY(), this.end.getX(), this.end.getY());
     }
 

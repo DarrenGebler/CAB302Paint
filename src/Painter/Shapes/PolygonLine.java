@@ -19,11 +19,10 @@ public class PolygonLine extends Shapes{
      * PolygonLine Shape Properties
      * @param start
      * @param colour
-     * @param stroke
      */
 
-    public PolygonLine(Points start, Color colour, Stroke stroke) {
-        super(start, colour, stroke);
+    public PolygonLine(Points start, Color colour) {
+        super(start, colour);
         this.xPoints = new ArrayList<>();
         this.yPoints = new ArrayList<>();
         this.numLines = 0;
@@ -37,7 +36,6 @@ public class PolygonLine extends Shapes{
      */
     public void draw(Graphics2D g) {
         g.setColor(this.getColour());
-        g.setStroke(this.getStroke());
         g.drawPolyline(this.box(xPoints), this.box(yPoints), this.numLines);
     }
 
