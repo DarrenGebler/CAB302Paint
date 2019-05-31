@@ -43,14 +43,16 @@ public class GUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel1 = new javax.swing.JPanel();
+        drawPanel = new javax.swing.JPanel();
         topMenuBar = new javax.swing.JMenuBar();
         fileMenu = new javax.swing.JMenu();
+        menuNew = new javax.swing.JMenuItem();
         menuOpen = new javax.swing.JMenuItem();
         menuSave = new javax.swing.JMenuItem();
         menuSaveAs = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         menuUndo = new javax.swing.JMenuItem();
+        menuRedo = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Vector Painter");
@@ -59,27 +61,67 @@ public class GUI extends javax.swing.JFrame {
 
         buttonPlot.setText("Plot");
         buttonPlot.setToolTipText("Click to plot a single point on the canvas");
+        buttonPlot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPlotActionPerformed(evt);
+            }
+        });
 
         buttonLine.setText("Line");
         buttonLine.setToolTipText("Click and drag to draw a straight line on the canvas");
+        buttonLine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLineActionPerformed(evt);
+            }
+        });
 
         buttonRectangle.setText("Rectangle");
         buttonRectangle.setToolTipText("Click and drag to draw a rectangle on the canvas");
+        buttonRectangle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRectangleActionPerformed(evt);
+            }
+        });
 
         buttonEllipse.setText("Ellipse");
         buttonEllipse.setToolTipText("Click and drag to draw an ellipse on the canvas");
+        buttonEllipse.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEllipseActionPerformed(evt);
+            }
+        });
 
         buttonPolygon.setText("Polygon");
         buttonPolygon.setToolTipText("Click the begin drawing a polygon on the canvas, click near the start to finish");
+        buttonPolygon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonPolygonActionPerformed(evt);
+            }
+        });
 
         buttonLineCol.setText("Line");
         buttonLineCol.setToolTipText("Set the line colour");
+        buttonLineCol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLineColActionPerformed(evt);
+            }
+        });
 
         buttonFillClear.setText("Clear Fill");
         buttonFillClear.setToolTipText("Clear the fill colour");
+        buttonFillClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonFillClearActionPerformed(evt);
+            }
+        });
 
         buttonFillCol.setText("Fill");
         buttonFillCol.setToolTipText("Set the fill colour");
+        buttonFillCol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonFillColActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Colour");
 
@@ -91,37 +133,62 @@ public class GUI extends javax.swing.JFrame {
         jScrollPane1.setToolTipText("");
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
-        jPanel1.setMaximumSize(new java.awt.Dimension(100, 100));
-        jPanel1.setPreferredSize(new java.awt.Dimension(100, 100));
+        drawPanel.setBackground(new java.awt.Color(255, 0, 0));
+        drawPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
+        drawPanel.setMaximumSize(new java.awt.Dimension(100, 100));
+        drawPanel.setPreferredSize(new java.awt.Dimension(100, 100));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout drawPanelLayout = new javax.swing.GroupLayout(drawPanel);
+        drawPanel.setLayout(drawPanelLayout);
+        drawPanelLayout.setHorizontalGroup(
+                drawPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 525, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-                jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        drawPanelLayout.setVerticalGroup(
+                drawPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGap(0, 522, Short.MAX_VALUE)
         );
 
-        jScrollPane1.setViewportView(jPanel1);
+        jScrollPane1.setViewportView(drawPanel);
 
         fileMenu.setText("File");
+
+        menuNew.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        menuNew.setText("New...");
+        menuNew.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuNewActionPerformed(evt);
+            }
+        });
+        fileMenu.add(menuNew);
 
         menuOpen.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
         menuOpen.setText("Open...");
         menuOpen.setInheritsPopupMenu(true);
         menuOpen.setPreferredSize(new java.awt.Dimension(190, 26));
+        menuOpen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuOpenActionPerformed(evt);
+            }
+        });
         fileMenu.add(menuOpen);
 
         menuSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         menuSave.setText("Save");
+        menuSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSaveActionPerformed(evt);
+            }
+        });
         fileMenu.add(menuSave);
 
         menuSaveAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         menuSaveAs.setText("Save As...");
+        menuSaveAs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuSaveAsActionPerformed(evt);
+            }
+        });
         fileMenu.add(menuSaveAs);
 
         topMenuBar.add(fileMenu);
@@ -131,7 +198,21 @@ public class GUI extends javax.swing.JFrame {
         menuUndo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.CTRL_MASK));
         menuUndo.setText("Undo");
         menuUndo.setPreferredSize(new java.awt.Dimension(150, 26));
+        menuUndo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuUndoActionPerformed(evt);
+            }
+        });
         editMenu.add(menuUndo);
+
+        menuRedo.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Y, java.awt.event.InputEvent.CTRL_MASK));
+        menuRedo.setText("Redo");
+        menuRedo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuRedoActionPerformed(evt);
+            }
+        });
+        editMenu.add(menuRedo);
 
         topMenuBar.add(editMenu);
 
@@ -163,7 +244,7 @@ public class GUI extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jSeparator1)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,7 +264,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(buttonEllipse, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonPolygon, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -199,6 +280,73 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /**
+     * Drawing tool button listeners
+     * @param evt
+     */
+    private void buttonPlotActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Plot Selected");
+    }
+
+    private void buttonLineActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Line Selected");
+    }
+
+    private void buttonRectangleActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Rectangle Selected");
+    }
+
+    private void buttonEllipseActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Ellipse Selected");
+    }
+
+    private void buttonPolygonActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Polygon Selected");
+    }
+
+    /**
+     * Color tool button listeners
+     * @param evt
+     */
+    private void buttonLineColActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Line Colour Selected");
+    }
+
+    private void buttonFillColActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Fill Colour Selected");
+    }
+
+    private void buttonFillClearActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Clear Fill Colour Selected");
+    }
+
+    /**
+     * Menu Option button listeners
+     * @param evt
+     */
+    private void menuNewActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "New menu option Selected");
+    }
+
+    private void menuOpenActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Open menu option Selected");
+    }
+
+    private void menuSaveActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Save menu option Selected");
+    }
+
+    private void menuSaveAsActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Save as menu option Selected");
+    }
+
+    private void menuUndoActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Undo menu option Selected");
+    }
+
+    private void menuRedoActionPerformed(java.awt.event.ActionEvent evt) {
+        JOptionPane.showMessageDialog(null, "Redo menu option Selected");
+    }
 
     // Variables declaration - do not modify
     private javax.swing.JButton buttonEllipse;
@@ -209,15 +357,17 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JButton buttonPlot;
     private javax.swing.JButton buttonPolygon;
     private javax.swing.JButton buttonRectangle;
+    private javax.swing.JPanel drawPanel;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenu fileMenu;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JMenuItem menuNew;
     private javax.swing.JMenuItem menuOpen;
+    private javax.swing.JMenuItem menuRedo;
     private javax.swing.JMenuItem menuSave;
     private javax.swing.JMenuItem menuSaveAs;
     private javax.swing.JMenuItem menuUndo;
