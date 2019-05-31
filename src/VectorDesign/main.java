@@ -3,14 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Painter;
+package VectorDesign;
 
 import javax.swing.*;
-import javax.swing.colorchooser.*;
 
 /**
  *
- * @author James
+ * @author James Hassett, Darren Gebler
  */
 public class main {
 

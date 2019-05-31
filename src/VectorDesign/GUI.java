@@ -1,12 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Painter;
+package VectorDesign;
 
 import javax.swing.*;
-import javax.swing.colorchooser.*;
+import java.awt.Color;
 
 /**
  *
@@ -19,6 +14,7 @@ public class GUI extends javax.swing.JFrame {
      */
     public GUI() {
         initComponents();
+        Color lineColor;
     }
 
     /**
@@ -99,8 +95,10 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
+        buttonLineCol.setBackground(new java.awt.Color(0, 0, 0));
         buttonLineCol.setText("Line");
         buttonLineCol.setToolTipText("Set the line colour");
+        buttonLineCol.setFocusable(false);
         buttonLineCol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLineColActionPerformed(evt);
@@ -109,6 +107,7 @@ public class GUI extends javax.swing.JFrame {
 
         buttonFillClear.setText("Clear Fill");
         buttonFillClear.setToolTipText("Clear the fill colour");
+        buttonFillClear.setFocusable(false);
         buttonFillClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonFillClearActionPerformed(evt);
@@ -117,6 +116,7 @@ public class GUI extends javax.swing.JFrame {
 
         buttonFillCol.setText("Fill");
         buttonFillCol.setToolTipText("Set the fill colour");
+        buttonFillCol.setFocusable(false);
         buttonFillCol.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonFillColActionPerformed(evt);
@@ -127,16 +127,14 @@ public class GUI extends javax.swing.JFrame {
 
         jLabel2.setText("Drawing");
 
-        jScrollPane1.setBackground(new java.awt.Color(51, 51, 255));
         jScrollPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         jScrollPane1.setToolTipText("");
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
-        drawPanel.setBackground(new java.awt.Color(255, 0, 0));
+        drawPanel.setBackground(new java.awt.Color(255, 255, 255));
         drawPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        drawPanel.setMaximumSize(new java.awt.Dimension(100, 100));
-        drawPanel.setPreferredSize(new java.awt.Dimension(100, 100));
+        drawPanel.setPreferredSize(new java.awt.Dimension(500, 500));
 
         javax.swing.GroupLayout drawPanelLayout = new javax.swing.GroupLayout(drawPanel);
         drawPanel.setLayout(drawPanelLayout);
@@ -244,7 +242,7 @@ public class GUI extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jSeparator1)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 546, Short.MAX_VALUE))
+                                .addComponent(jScrollPane1))
         );
         layout.setVerticalGroup(
                 layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,7 +262,7 @@ public class GUI extends javax.swing.JFrame {
                                 .addComponent(buttonEllipse, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonPolygon, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -309,14 +307,28 @@ public class GUI extends javax.swing.JFrame {
      * @param evt
      */
     private void buttonLineColActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Line Colour Selected");
+        Color colorSelection = JColorChooser.showDialog(null, "Select line colour", lineColor);
+        if (colorSelection != null) {
+            lineColor = colorSelection;
+        }
+
+        buttonLineCol.setBackground(lineColor);
+        JOptionPane.showMessageDialog(null, "Line Colour Selected" + lineColor);
     }
 
     private void buttonFillColActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Fill Colour Selected");
+        Color colorSelection = JColorChooser.showDialog(null, "Select fill colour", fillColor);
+        if (colorSelection != null) {
+            fillColor = colorSelection;
+        }
+
+        buttonFillCol.setBackground(fillColor);
+        JOptionPane.showMessageDialog(null, "Fill Colour Selected" + fillColor);
     }
 
     private void buttonFillClearActionPerformed(java.awt.event.ActionEvent evt) {
+        fillColor = null;
+        buttonFillCol.setBackground(fillColor);
         JOptionPane.showMessageDialog(null, "Clear Fill Colour Selected");
     }
 
@@ -348,6 +360,7 @@ public class GUI extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Redo menu option Selected");
     }
 
+
     // Variables declaration - do not modify
     private javax.swing.JButton buttonEllipse;
     private javax.swing.JButton buttonFillClear;
@@ -374,6 +387,6 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuBar topMenuBar;
     // End of variables declaration
 
-    // Save Size
-    private java.awt.Dimension lastSize;
+    private Color lineColor = new Color(0, 0, 0);
+    private Color fillColor = null;
 }
