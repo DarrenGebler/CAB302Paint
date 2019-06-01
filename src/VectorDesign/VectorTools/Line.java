@@ -58,4 +58,15 @@ public class Line extends Shapes {
         graphics.setColor(getLineColor());
         graphics.drawLine((int)((x1) * canvasSize), (int)((y1) * canvasSize), (int)((x2) * canvasSize), (int)((y2) * canvasSize));
     }
+
+    /**
+     * Used only for polygon, return false
+     * @param x2 x position of new vertex
+     * @param y2 y position of new vertex
+     * @return false
+     */
+    @Override
+    public boolean addVertex(double x2, double y2){
+        return false;
+    }
 }

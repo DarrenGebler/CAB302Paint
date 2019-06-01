@@ -6,6 +6,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import VectorDesign.VectorTools.*;
+import VectorDesign.VectorTools.Polygon;
+import VectorDesign.VectorTools.Rectangle;
 
 /**
  * Handles canvas setup and vector drawing
@@ -22,13 +24,13 @@ public class CanvasDrawing extends JPanel {
 
     // Mouse position
     private Point clickPos;
-    private Point dragPos;
+    private Point mousePos;
 
     // Tool properties
     private Tools currentTool = Tools.PLOT;
     private Color lineColor = new Color(0,0,0);
     private Color fillColor;
-    private boolean fill;
+    private boolean polygonComplete;
 
     /**
      * Setup the JPanel extension for drawing, handle canvas mouse events
@@ -54,6 +56,7 @@ public class CanvasDrawing extends JPanel {
             public void mousePressed(MouseEvent e) {
                 clickPos = e.getPoint();
 
+                // Create a new object depending on tool selected
                 switch (currentTool) {
                     case PLOT:
                         currentObject = new Plot(getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor);
@@ -62,11 +65,20 @@ public class CanvasDrawing extends JPanel {
                         currentObject = new Line(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor);
                         break;
                     case RECTANGLE:
+                        currentObject = new Rectangle(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor, fillColor);
                         break;
                     case ELLIPSE:
                         currentObject = new Ellipse(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor, fillColor);
                         break;
                     case POLYGON:
+                        if (currentObject == null) {
+                            double[] xValues = {getVecCoord(clickPos.x), getVecCoord(clickPos.x)};
+                            double[] yValues = {getVecCoord(clickPos.y), getVecCoord(clickPos.y)};
+
+                            currentObject = new Polygon(xValues, yValues, lineColor, fillColor);
+                        } else if (currentTool == Tools.POLYGON && clickPos != null) {
+                            polygonComplete = currentObject.addVertex(getVecCoord(mousePos.x), getVecCoord(mousePos.y));
+                        }
                         break;
                     default:
                         currentTool = Tools.PLOT;
@@ -78,10 +90,17 @@ public class CanvasDrawing extends JPanel {
              * @param e
              */
             public void mouseReleased(MouseEvent e) {
-                canvasGraphics.addObject(currentObject);
-                clickPos = null;
+                if (currentTool != Tools.POLYGON || polygonComplete) {
+                    // Add new object to canvas container
+                    canvasGraphics.addObject(currentObject);
 
-                repaint();
+                    // Clear storage
+                    currentObject = null;
+                    clickPos = null;
+                    polygonComplete = false;
+
+                    repaint();
+                }
             }
         });
 
@@ -95,8 +114,8 @@ public class CanvasDrawing extends JPanel {
              * @param e
              */
             public void mouseDragged(MouseEvent e) {
-                dragPos = e.getPoint();
-                currentObject.preview(getVecCoord(dragPos.x), getVecCoord(dragPos.y));
+                mousePos = e.getPoint();
+                currentObject.preview(getVecCoord(mousePos.x), getVecCoord(mousePos.y));
                 repaint();
             }
 
@@ -105,7 +124,11 @@ public class CanvasDrawing extends JPanel {
              * @param e
              */
             public void mouseMoved(MouseEvent e) {
-
+                if (currentTool == Tools.POLYGON && clickPos != null) {
+                    mousePos = e.getPoint();
+                    currentObject.preview(getVecCoord(mousePos.x), getVecCoord(mousePos.y));
+                    repaint();
+                }
             }
         });
     }

@@ -60,6 +60,15 @@ public abstract class Shapes {
     public abstract String toVec();
 
     /**
+     * Used exclusively for polygon creation, add's a vertex and closes polygon if the new vertex is
+     * close to the starting point
+     * @param x2 x position of new vertex
+     * @param y2 y position of new vertex
+     * @return true if polygon is closed as a result of adding point
+     */
+    public abstract boolean addVertex(double x2, double y2);
+
+    /**
      * Allows resizing and preview of an object being drawn by changing the end coordinates
      * @param x2
      * @param y2

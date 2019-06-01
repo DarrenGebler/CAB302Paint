@@ -51,8 +51,8 @@ public class Ellipse extends Shapes {
         this.x2 = x2;
         this.y2 = y2;
 
-        this.width = Math.abs(x2 - x1);
-        this.height = Math.abs(y2 - y1);
+        this.width = Math.abs(x1 - x2);
+        this.height = Math.abs(y1 - y2);
     }
 
 
@@ -73,5 +73,16 @@ public class Ellipse extends Shapes {
 
         graphics.setColor(getLineColor());
         graphics.drawOval((int) x, (int) y, (int) (width * canvasSize), (int) (height * canvasSize));
+    }
+
+    /**
+     * Used only for polygon, return false
+     * @param x2 x position of new vertex
+     * @param y2 y position of new vertex
+     * @return false
+     */
+    @Override
+    public boolean addVertex(double x2, double y2){
+        return false;
     }
 }

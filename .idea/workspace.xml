@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98e04d51-7f9c-413c-9c3d-202c3c80a36f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/FileDrawing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,12 +26,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VectorDesign/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1010">
-              <caret line="382" column="58" selection-start-line="382" selection-start-column="58" selection-end-line="382" selection-end-column="58" />
+            <state relative-caret-position="1911">
+              <caret line="339" column="37" selection-start-line="339" selection-start-column="37" selection-end-line="339" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#489#490#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
+                <element signature="e#296#297#0" expanded="true" />
+                <element signature="e#327#328#0" expanded="true" />
                 <element signature="e#767#797#0" expanded="true" />
                 <element signature="e#2301#2485#0" expanded="true" />
                 <element signature="e#2484#2485#0" expanded="true" />
@@ -80,15 +76,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
-              <caret line="130" column="45" lean-forward="true" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+            <state relative-caret-position="1326">
+              <caret line="78" column="86" lean-forward="true" selection-start-line="78" selection-start-column="86" selection-end-line="78" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3168#3169#0" expanded="true" />
-                <element signature="e#4370#4371#0" expanded="true" />
+                <element signature="e#5177#5178#0" expanded="true" />
+                <element signature="e#5349#5350#0" expanded="true" />
+                <element signature="e#5521#5522#0" expanded="true" />
+                <element signature="e#6171#6172#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,45 +95,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="595">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#971#972#0" expanded="true" />
-                <element signature="e#1009#1010#0" expanded="true" />
-                <element signature="e#1118#1119#0" expanded="true" />
-                <element signature="e#1151#1152#0" expanded="true" />
-                <element signature="e#1186#1187#0" expanded="true" />
-                <element signature="e#1221#1222#0" expanded="true" />
-                <element signature="e#1106#1107#0" expanded="true" />
-                <element signature="e#1136#1137#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
-              <folding>
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#857#858#0" expanded="true" />
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#999#1000#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#949#950#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java">
+        <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="422">
+              <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -178,8 +164,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ColourPicker/ColourPicker.java" />
-        <option value="$PROJECT_DIR$/GUI/GUI.java" />
         <option value="$PROJECT_DIR$/BackEnd/ColourPicker/ColourPicker.java" />
         <option value="$PROJECT_DIR$/BackEnd/Canvas/Canvas.java" />
         <option value="$PROJECT_DIR$/BackEnd/Canvas/canvas.java" />
@@ -217,18 +201,20 @@
         <option value="$PROJECT_DIR$/src/Painter/main.java" />
         <option value="$PROJECT_DIR$/src/Painter/GUI_OLD.java" />
         <option value="$PROJECT_DIR$/src/Painter/GUI.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/main.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/DrawingHandler.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/CanvasHandler.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/VectorContainer.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/main.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/GUI.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" />
       </list>
     </option>
   </component>
@@ -409,7 +395,21 @@
       <option name="project" value="LOCAL" />
       <updated>1559296718919</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Continuing rework; added line method, added live preview">
+      <created>1559374567792</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1559374567792</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added ellipse drawing, added plotting, organised and added function documentation">
+      <created>1559382083617</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1559382083617</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -425,8 +425,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3291239" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19415943" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39936858" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3875296" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39360872" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -517,7 +517,9 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Commit Test" />
     <MESSAGE value="Rework project, new GUI, new structure base." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rework project, new GUI, new structure base." />
+    <MESSAGE value="Continuing rework; added line method, added live preview" />
+    <MESSAGE value="Added ellipse drawing, added plotting, organised and added function documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ellipse drawing, added plotting, organised and added function documentation" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -570,31 +572,10 @@
     <entry file="file://$PROJECT_DIR$/src/Painter/GUI_OLD.java" />
     <entry file="file://$PROJECT_DIR$/src/Painter/GUI.java" />
     <entry file="file://$PROJECT_DIR$/src/Painter/main.java" />
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/FileDrawing.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -610,23 +591,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -634,32 +598,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="26" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
-            <element signature="e#1009#1010#0" expanded="true" />
-            <element signature="e#1118#1119#0" expanded="true" />
-            <element signature="e#1151#1152#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1221#1222#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1136#1137#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="340">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1010">
-          <caret line="382" column="58" selection-start-line="382" selection-start-column="58" selection-end-line="382" selection-end-column="58" />
+        <state relative-caret-position="1911">
+          <caret line="339" column="37" selection-start-line="339" selection-start-column="37" selection-end-line="339" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#296#297#0" expanded="true" />
+            <element signature="e#327#328#0" expanded="true" />
             <element signature="e#767#797#0" expanded="true" />
             <element signature="e#2301#2485#0" expanded="true" />
             <element signature="e#2484#2485#0" expanded="true" />
@@ -703,36 +656,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java">
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="130" column="45" lean-forward="true" selection-start-line="130" selection-start-column="45" selection-end-line="130" selection-end-column="45" />
+        <state relative-caret-position="837">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3168#3169#0" expanded="true" />
-            <element signature="e#4370#4371#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
+            <element signature="e#2428#2429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="837">
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+          <folding>
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1719#1720#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        <state relative-caret-position="1156">
+          <caret line="70" column="5" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+        <state relative-caret-position="294">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#717#718#0" expanded="true" />
             <element signature="e#749#750#0" expanded="true" />
             <element signature="e#857#858#0" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#999#1000#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="95" column="33" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="78" column="86" lean-forward="true" selection-start-line="78" selection-start-column="86" selection-end-line="78" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5177#5178#0" expanded="true" />
+            <element signature="e#5349#5350#0" expanded="true" />
+            <element signature="e#5521#5522#0" expanded="true" />
+            <element signature="e#6171#6172#0" expanded="true" />
           </folding>
         </state>
       </provider>
