@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.io.IOException;
+
 import VectorDesign.VectorTools.*;
 import VectorDesign.VectorTools.Polygon;
 import VectorDesign.VectorTools.Rectangle;
@@ -19,8 +21,11 @@ public class CanvasDrawing extends JPanel {
     // Current shape to draw for preview
     private Shapes currentObject;
 
-    // All shapes stored in a list
-    private GraphicsContainer canvasGraphics = new GraphicsContainer(1);
+    // All shapes stored in the canvasGraphics object
+    private GraphicsContainer canvasGraphics = new GraphicsContainer(498);
+
+    // List to save undo history to
+    private GraphicsContainer undoHistory = new GraphicsContainer(498);
 
     // Mouse position
     private Point clickPos;
@@ -158,6 +163,92 @@ public class CanvasDrawing extends JPanel {
     }
 
     /**
+     * Returns the vector coordinate from a pixel coordinate
+     * @param canvasPos pixel position
+     */
+    private double getVecCoord(int canvasPos) {
+        return (double) canvasPos / (double) canvasGraphics.getSize();
+    }
+
+    /**
+     * Uses the FileDrawing class to import objects from a vec formatted file
+     * Overrides current graphics canvas
+     * @param path file path to open
+     */
+    public void openFile(String path) {
+        try {
+            // Store current size as file import will clear it
+            int canvasSize = canvasGraphics.getSize();
+
+            // Attempt to import the vec file and set the canvas
+            canvasGraphics = FileDrawing.fileImport(path);
+            canvasGraphics.setSize(canvasSize);
+
+            // Redraw the canvas
+            repaint();
+        } catch (IOException error) {
+            error.printStackTrace();
+        }
+    }
+
+    public void saveFile(String path) {
+        try {
+            FileDrawing.fileExport(path, canvasGraphics);
+        } catch (IOException error) {
+            error.printStackTrace();
+        }
+    }
+
+    /**
+     * Provides undo functionality by deleting the last object from
+     * the canvasGraphics list.
+     * Saves undo to undoHistory to enable redo functionality
+     */
+    public void undo() {
+        if (canvasGraphics.getObjects().size() > 0) {
+            // Add last object to redo list
+            undoHistory.addObject(canvasGraphics.getObjects().get(canvasGraphics.getObjects().size() - 1));
+
+            // Remove last object from current canvas
+            canvasGraphics.removeObject(canvasGraphics.getObjects().size() - 1);
+            repaint();
+        }
+    }
+
+    /**
+     * Provides redo functionality by adding the last object from
+     * the undoHistory list to the current canvasGraphics list
+     */
+    public void redo() {
+        if (undoHistory.getObjects().size() > 0) {
+            // Add last object to current canvas
+            canvasGraphics.addObject(undoHistory.getObjects().get(undoHistory.getObjects().size() - 1));
+
+            // Remove last object from undo history
+            undoHistory.removeObject(undoHistory.getObjects().size() - 1);
+            repaint();
+        }
+    }
+
+    /**
+     * Clears all graphics objects currently in the canvas list
+     */
+    public void canvasClear() {
+        // Clear canvas
+        if (canvasGraphics.getObjects().size() > 0) {
+            canvasGraphics.getObjects().removeAll(canvasGraphics.getObjects());
+        }
+
+        // Clear undo history
+        if (undoHistory.getObjects().size() > 0) {
+            undoHistory.getObjects().removeAll(undoHistory.getObjects());
+        }
+
+        // Update canvas
+        repaint();
+    }
+
+    /**
      * Resizes the vector canvas (maintaining aspect ratio) when the user resizes the window.
      * @param containerSize
      */
@@ -166,14 +257,6 @@ public class CanvasDrawing extends JPanel {
         gui.vectorCanvas.setPreferredSize(new Dimension(minEdge - 10,minEdge - 10));
 
         canvasGraphics.setSize(minEdge - 10);
-    }
-
-    /**
-     * Returns the vector coordinate from a pixel coordinate
-     * @param canvasPos pixel position
-     */
-    private double getVecCoord(int canvasPos) {
-        return (double) canvasPos / (double) canvasGraphics.getSize();
     }
 
     /**
@@ -187,7 +270,6 @@ public class CanvasDrawing extends JPanel {
         // Draw all objects currently in the canvasGraphics list
         for (Shapes object: canvasGraphics.getObjects()) {
             object.draw(graphics, canvasGraphics.getSize());
-            System.out.println(object.toVec());
         }
 
         // Update object preview

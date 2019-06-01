@@ -46,6 +46,12 @@ public class GraphicsContainer {
         objects.add(object);
     }
 
+    public void removeObject(int index) {
+        if (objects.size() > 0) {
+            objects.remove(index);
+        }
+    }
+
     /**
      * Used for drawing objects in the list to the canvas
      * @return objects Return the list of objects in the container

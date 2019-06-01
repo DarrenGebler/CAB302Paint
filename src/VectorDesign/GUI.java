@@ -1,6 +1,7 @@
 package VectorDesign;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.awt.Color;
 import java.awt.Dimension;
 
@@ -46,7 +47,7 @@ public class GUI extends javax.swing.JFrame {
         fileMenu = new javax.swing.JMenu();
         menuNew = new javax.swing.JMenuItem();
         menuOpen = new javax.swing.JMenuItem();
-        menuSave = new javax.swing.JMenuItem();
+        // menuSave = new javax.swing.JMenuItem();
         menuSaveAs = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
         menuUndo = new javax.swing.JMenuItem();
@@ -187,6 +188,9 @@ public class GUI extends javax.swing.JFrame {
         });
         fileMenu.add(menuOpen);
 
+        /*
+        OLD SAVE OPTION
+
         menuSave.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_MASK));
         menuSave.setText("Save");
         menuSave.addActionListener(new java.awt.event.ActionListener() {
@@ -195,6 +199,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
         fileMenu.add(menuSave);
+        */
 
         menuSaveAs.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         menuSaveAs.setText("Save As...");
@@ -356,27 +361,58 @@ public class GUI extends javax.swing.JFrame {
      * @param evt
      */
     private void menuNewActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "New menu option Selected");
+        int confirmResult = JOptionPane.showConfirmDialog(getContentPane(), "Are you sure you wish to clear the canvas?", "Clear the canvas...", JOptionPane.YES_NO_OPTION);
+
+        if (confirmResult == 0) {
+            vectorCanvas.canvasClear();
+        }
     }
 
     private void menuOpenActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Open menu option Selected");
-    }
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Vector (*.vec)", "vec"));
 
-    private void menuSaveActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Save menu option Selected");
+        if (fileChooser.showOpenDialog(getContentPane()) == JFileChooser.APPROVE_OPTION) {
+            vectorCanvas.openFile(fileChooser.getSelectedFile().getPath());
+        }
     }
 
     private void menuSaveAsActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Save as menu option Selected");
+        JFileChooser fileChooser = new JFileChooser();
+
+        // Allow user to specify file type
+        fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("Vector (*.vec)", "vec"));
+        fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("Plain text (*.txt)", "txt"));
+        fileChooser.setAcceptAllFileFilterUsed(false);
+
+        if (fileChooser.showSaveDialog(getContentPane()) == JFileChooser.APPROVE_OPTION) {
+            // Get selected file type
+            FileNameExtensionFilter fileType = (FileNameExtensionFilter) fileChooser.getFileFilter();
+            String extension;
+
+            // If file does not have a valid extension add one
+            if (!fileChooser.getSelectedFile().getName().contains(".vec")
+                    && !fileChooser.getSelectedFile().getName().contains(".txt")) {
+                if (fileType.getExtensions()[0] == "vec") {
+                    extension = ".vec";
+                } else {
+                    extension = ".txt";
+                }
+            } else {
+                extension = "";
+            }
+
+            // Save file
+            vectorCanvas.saveFile(fileChooser.getSelectedFile().getPath() + extension);
+        }
     }
 
     private void menuUndoActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Undo menu option Selected");
+        vectorCanvas.undo();
     }
 
     private void menuRedoActionPerformed(java.awt.event.ActionEvent evt) {
-        JOptionPane.showMessageDialog(null, "Redo menu option Selected");
+        vectorCanvas.redo();
     }
 
     private void formComponentResized(java.awt.event.ComponentEvent evt) {
@@ -403,11 +439,10 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuNew;
     private javax.swing.JMenuItem menuOpen;
     private javax.swing.JMenuItem menuRedo;
-    private javax.swing.JMenuItem menuSave;
+    // private javax.swing.JMenuItem menuSave;
     private javax.swing.JMenuItem menuSaveAs;
     private javax.swing.JMenuItem menuUndo;
     private javax.swing.JMenuBar topMenuBar;
-    // End of variables declaration
 
     public CanvasDrawing vectorCanvas;
     private Color lineColor = new Color(0, 0, 0);
