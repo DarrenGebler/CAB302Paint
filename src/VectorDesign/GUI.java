@@ -329,26 +329,26 @@ public class GUI extends javax.swing.JFrame {
         Color colorSelection = JColorChooser.showDialog(null, "Select line colour", lineColor);
         if (colorSelection != null) {
             lineColor = colorSelection;
+            vectorCanvas.setLineColor(lineColor);
         }
 
         buttonLineCol.setBackground(lineColor);
-        JOptionPane.showMessageDialog(null, "Line Colour Selected" + lineColor);
     }
 
     private void buttonFillColActionPerformed(java.awt.event.ActionEvent evt) {
         Color colorSelection = JColorChooser.showDialog(null, "Select fill colour", fillColor);
         if (colorSelection != null) {
             fillColor = colorSelection;
+            vectorCanvas.setFillColor(fillColor);
         }
 
         buttonFillCol.setBackground(fillColor);
-        JOptionPane.showMessageDialog(null, "Fill Colour Selected" + fillColor);
     }
 
     private void buttonFillClearActionPerformed(java.awt.event.ActionEvent evt) {
         fillColor = null;
         buttonFillCol.setBackground(fillColor);
-        JOptionPane.showMessageDialog(null, "Clear Fill Colour Selected");
+        vectorCanvas.setFillColor(fillColor);
     }
 
     /**

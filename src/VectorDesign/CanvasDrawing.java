@@ -24,8 +24,11 @@ public class CanvasDrawing extends JPanel {
     private Point clickPos;
     private Point dragPos;
 
-    // Tool selection
-    private Tools currentTool;
+    // Tool properties
+    private Tools currentTool = Tools.PLOT;
+    private Color lineColor = new Color(0,0,0);
+    private Color fillColor;
+    private boolean fill;
 
     /**
      * Setup the JPanel extension for drawing, handle canvas mouse events
@@ -35,7 +38,9 @@ public class CanvasDrawing extends JPanel {
         this.gui = gui;
         this.setBackground(Color.WHITE);
         this.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
-        this.setPreferredSize(new Dimension(500,500));
+        this.setPreferredSize(new Dimension(498,498));
+
+        canvasGraphics.setSize(498);
 
 
         /**
@@ -51,10 +56,17 @@ public class CanvasDrawing extends JPanel {
 
                 switch (currentTool) {
                     case PLOT:
-                        currentObject = new Line(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), new Color(100,100,100));
+                        currentObject = new Plot(getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor);
                         break;
                     case LINE:
-                        currentObject = new Line(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), new Color(100,100,100));
+                        currentObject = new Line(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor);
+                        break;
+                    case RECTANGLE:
+                        break;
+                    case ELLIPSE:
+                        currentObject = new Ellipse(getVecCoord(clickPos.x), getVecCoord(clickPos.y), getVecCoord(clickPos.x), getVecCoord(clickPos.y), lineColor, fillColor);
+                        break;
+                    case POLYGON:
                         break;
                     default:
                         currentTool = Tools.PLOT;
@@ -68,6 +80,7 @@ public class CanvasDrawing extends JPanel {
             public void mouseReleased(MouseEvent e) {
                 canvasGraphics.addObject(currentObject);
                 clickPos = null;
+
                 repaint();
             }
         });
@@ -97,8 +110,47 @@ public class CanvasDrawing extends JPanel {
         });
     }
 
+    /**
+     * Sets the current tool
+     * @param tool Tool type from Tools enum
+     */
     public void setTool(Tools tool) {
         currentTool = tool;
+    }
+
+    /**
+     * Sets the line color for shapes
+     * @param color Color of shape line
+     */
+    public void setLineColor(Color color) {
+        lineColor = color;
+    }
+
+    /**
+     * Sets the fill color for shepes
+     * @param color Color of shape fill
+     */
+    public void setFillColor(Color color) {
+        fillColor = color;
+    }
+
+    /**
+     * Resizes the vector canvas (maintaining aspect ratio) when the user resizes the window.
+     * @param containerSize
+     */
+    public void canvasResize(Dimension containerSize) {
+        int minEdge = Math.min(containerSize.height, containerSize.width);
+        gui.vectorCanvas.setPreferredSize(new Dimension(minEdge - 10,minEdge - 10));
+
+        canvasGraphics.setSize(minEdge - 10);
+    }
+
+    /**
+     * Returns the vector coordinate from a pixel coordinate
+     * @param canvasPos pixel position
+     */
+    private double getVecCoord(int canvasPos) {
+        return (double) canvasPos / (double) canvasGraphics.getSize();
     }
 
     /**
@@ -112,30 +164,12 @@ public class CanvasDrawing extends JPanel {
         // Draw all objects currently in the canvasGraphics list
         for (Shapes object: canvasGraphics.getObjects()) {
             object.draw(graphics, canvasGraphics.getSize());
+            System.out.println(object.toVec());
         }
 
         // Update object preview
         if (clickPos != null) {
             currentObject.draw(graphics, canvasGraphics.getSize());
         }
-    }
-
-    /**
-     * Resizes the vector canvas (maintaining aspect ratio) when the user resizes the window.
-     * @param containerSize
-     */
-    public void canvasResize(Dimension containerSize) {
-        int minEdge = Math.min(containerSize.height, containerSize.width);
-        gui.vectorCanvas.setPreferredSize(new Dimension(minEdge - 50,minEdge - 50));
-
-        canvasGraphics.setSize(minEdge - 50);
-    }
-
-    /**
-     * Returns the vector coordinate from a pixel coordinate
-     * @param canvasPos pixel position
-     */
-    private double getVecCoord(int canvasPos) {
-        return (double) canvasPos / (double) canvasGraphics.getSize();
     }
 }
