@@ -4,9 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.Vector;
 
+/**
+ * Extends JDialog to provide a scrollable list of drawing commands
+ */
 class UndoGUI extends JDialog {
+    /**
+     * Creates a JDialog with a ScrollPanel and confirm button that allows a user to browse drawing commands
+     * @param canvasGraphics The canvas currently being drawn on
+     */
     UndoGUI(CanvasDrawing canvasGraphics) {
         // Setup Dialog box properties
         getContentPane().setLayout(new BorderLayout());

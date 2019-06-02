@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98e04d51-7f9c-413c-9c3d-202c3c80a36f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/VectorDesign/UndoGUI.java" afterDir="false" />
+    <list default="true" id="bc8be8ff-5c28-47d7-971b-68a9f63b7f76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VectorDesign/UnitTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VectorDesign/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/UndoGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/UndoGUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VectorDesign/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,45 +24,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VectorDesign/main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="262" column="5" lean-forward="true" selection-start-line="262" selection-start-column="5" selection-end-line="262" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5302#5303#0" expanded="true" />
-                <element signature="e#5336#5337#0" expanded="true" />
-                <element signature="e#5475#5476#0" expanded="true" />
-                <element signature="e#5508#5509#0" expanded="true" />
-                <element signature="e#5647#5648#0" expanded="true" />
-                <element signature="e#5680#5681#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java">
+        <entry file="file://$PROJECT_DIR$/src/VectorDesign/UnitTesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+            <state relative-caret-position="272">
+              <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#7481#7482#0" expanded="true" />
+                <element signature="e#7512#7513#0" expanded="true" />
+                <element signature="e#8226#8227#0" expanded="true" />
+                <element signature="e#8273#8274#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VectorDesign/UndoGUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VectorDesign/GUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/VectorDesign/FileDrawing.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-408">
+              <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -71,112 +77,35 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>%</find>
-      <find>canvas</find>
-      <find>Panel</find>
-      <find>addMouseListener(this);</find>
-      <find>stroke</find>
-      <find>Stroke</find>
-      <find>stro</find>
-      <find>getStroke</find>
-      <find>jPanel3Layout</find>
-      <find>jPanel3</find>
-      <find>menuRedo</find>
-      <find>menuSaveAs</find>
-      <find>menuSave</find>
-      <find>menuUndo</find>
-      <find>canvasBackup</find>
+      <find>open</find>
     </findStrings>
-    <dirStrings>
-      <dir>C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\src\Painter</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BackEnd/Canvas/canvas.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/GUI/ZoomAndPanListener.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/ColourPicker/ColourPicker.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/GUI/GUI.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/Shapes/Polygon.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/Shapes/Rectangle.java" />
-        <option value="$PROJECT_DIR$/FrontEnd/GUI/Shapes/Shapes.java" />
-        <option value="$PROJECT_DIR$/src/Painter/ColourPicker.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Square.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Polygon.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapeElementVisitor.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Eraser.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapesElementVisitor.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapePass.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapesElementDoVisitor.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/FreeDraw.java" />
-        <option value="$PROJECT_DIR$/src/Painter/DrawStack.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Points.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Canvas.java" />
-        <option value="$PROJECT_DIR$/src/Painter/PaintModel.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/DrawShapes.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Canvas.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapesPass.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapesDoPass.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/ShapesElement.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Shapes.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/PolygonLine.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Plot.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Line.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Ellipse.java" />
-        <option value="$PROJECT_DIR$/src/Painter/Shapes/Circle.java" />
-        <option value="$PROJECT_DIR$/src/Painter/main.java" />
-        <option value="$PROJECT_DIR$/src/Painter/GUI_OLD.java" />
-        <option value="$PROJECT_DIR$/src/Painter/GUI.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/DrawingHandler.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/CanvasHandler.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorContainer.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/FileDrawing.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/main.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/UndoGUI.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" />
         <option value="$PROJECT_DIR$/src/VectorDesign/GUI.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java" />
-        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java" />
+        <option value="$PROJECT_DIR$/src/VectorDesign/UnitTesting.java" />
       </list>
     </option>
   </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand />
-      <select />
-    </treeState>
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1165" />
-    <option name="y" value="260" />
-    <option name="width" value="1720" />
-    <option name="height" value="858" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
+    <option name="x" value="2992" />
+    <option name="y" value="-8" />
+    <option name="width" value="3456" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -210,6 +139,10 @@
               <item name="VectorDesign" type="462c0819:PsiDirectoryNode" />
               <item name="VectorTools" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CAB302Paint_Rework" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -217,23 +150,17 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Other/SoftwareDevelopmentProject-master" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="Shapes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\FrontEnd" />
-      <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\BackEnd" />
-      <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\Canvas" />
-      <recent name="C:\Users\darre\Desktop\2019 Sem 1\CAB302\CAB302Paint\GUI" />
-    </key>
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../2019 Sem 1/CAB302/Assignment1/Assignment1/exercises/junit/BioLibrary" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -247,86 +174,93 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.main (1)">
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI" />
-      <module name="CAB302Paint" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GUI" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Painter.GUI" />
-      <module name="CAB302Paint" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Painter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GUI_OLD" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Painter.GUI_OLD" />
-      <module name="CAB302Paint" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Painter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="VectorDesign.main" />
-      <module name="CAB302Paint" />
+  <component name="RunManager" selected="JUnit.UnitTesting">
+    <configuration name="UnitTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CAB302Paint_Rework" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="VectorDesign.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="VectorDesign" />
+      <option name="MAIN_CLASS_NAME" value="VectorDesign.UnitTesting" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Painter.main" />
-      <module name="CAB302Paint" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Painter.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="VectorDesign.main" />
-      <module name="CAB302Paint" />
+    <configuration name="UnitTesting.testCanvasDrawUndo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CAB302Paint_Rework" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="VectorDesign.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="VectorDesign" />
+      <option name="MAIN_CLASS_NAME" value="VectorDesign.UnitTesting" />
+      <option name="METHOD_NAME" value="testCanvasDrawUndo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitTesting.testCanvasDrawUndoRedo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CAB302Paint_Rework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="VectorDesign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="VectorDesign" />
+      <option name="MAIN_CLASS_NAME" value="VectorDesign.UnitTesting" />
+      <option name="METHOD_NAME" value="testCanvasDrawUndoRedo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitTesting.testFileDrawingContruction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CAB302Paint_Rework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="VectorDesign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="VectorDesign" />
+      <option name="MAIN_CLASS_NAME" value="VectorDesign.UnitTesting" />
+      <option name="METHOD_NAME" value="testFileDrawingContruction" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UnitTesting.testUndoGUIConstruction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CAB302Paint_Rework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="VectorDesign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="VectorDesign" />
+      <option name="MAIN_CLASS_NAME" value="VectorDesign.UnitTesting" />
+      <option name="METHOD_NAME" value="testUndoGUIConstruction" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main (1)" />
-        <item itemvalue="Application.main" />
-        <item itemvalue="Application.GUI_OLD" />
-        <item itemvalue="Application.GUI" />
-        <item itemvalue="Application.GUI" />
+        <item itemvalue="JUnit.UnitTesting" />
+        <item itemvalue="JUnit.UnitTesting.testUndoGUIConstruction" />
+        <item itemvalue="JUnit.UnitTesting.testFileDrawingContruction" />
+        <item itemvalue="JUnit.UnitTesting.testCanvasDrawUndo" />
+        <item itemvalue="JUnit.UnitTesting.testCanvasDrawUndoRedo" />
       </list>
     </recent_temporary>
   </component>
@@ -335,344 +269,193 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="98e04d51-7f9c-413c-9c3d-202c3c80a36f" name="Default Changelist" comment="" />
-      <created>1557728662090</created>
+      <changelist id="bc8be8ff-5c28-47d7-971b-68a9f63b7f76" name="Default Changelist" comment="" />
+      <created>1559471285840</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1557728662090</updated>
+      <updated>1559471285840</updated>
+      <workItem from="1559471291141" duration="7350000" />
     </task>
-    <task id="LOCAL-00001" summary="Commit Test">
-      <created>1559217087035</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1559217087035</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Rework project, new GUI, new structure base.">
-      <created>1559296718919</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1559296718919</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Continuing rework; added line method, added live preview">
-      <created>1559374567792</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1559374567792</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added ellipse drawing, added plotting, organised and added function documentation">
-      <created>1559382083617</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1559382083617</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Completed implementation of all drawing functions">
-      <created>1559399682628</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1559399682628</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Added undo / redo functionality, added file save and open functionality">
-      <created>1559412867678</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1559412867678</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="UnitTesting_testToolsConstruction - 2019.06.02 at 22h 01m 00s.xml">
+      <configuration name="UnitTesting.testToolsConstruction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testToolsConstruction - 2019.06.02 at 22h 01m 40s.xml">
+      <configuration name="UnitTesting.testToolsConstruction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testCanvasDrawSets - 2019.06.02 at 22h 03m 13s.xml">
+      <configuration name="UnitTesting.testCanvasDrawSets" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting - 2019.06.02 at 22h 08m 00s.xml">
+      <configuration name="UnitTesting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testCanvasDrawUndoRedo - 2019.06.02 at 22h 15m 29s.xml">
+      <configuration name="UnitTesting.testCanvasDrawUndoRedo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testCanvasDrawUndo - 2019.06.02 at 22h 20m 13s.xml">
+      <configuration name="UnitTesting.testCanvasDrawUndo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testCanvasDrawUndo - 2019.06.02 at 22h 20m 44s.xml">
+      <configuration name="UnitTesting.testCanvasDrawUndo" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testFileDrawingContruction - 2019.06.02 at 22h 22m 24s.xml">
+      <configuration name="UnitTesting.testFileDrawingContruction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting_testUndoGUIConstruction - 2019.06.02 at 22h 25m 37s.xml">
+      <configuration name="UnitTesting.testUndoGUIConstruction" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="UnitTesting - 2019.06.02 at 22h 26m 11s.xml">
+      <configuration name="UnitTesting" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7350000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="3456" height="1416" extended-state="6" />
+    <frame x="2992" y="-8" width="3456" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08303887" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13751473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32914376" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3289166" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49939758" visible="true" weight="0.23460639" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39305446" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32657832" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.15711646" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5006024" side_tool="true" weight="0.24072613" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.114575215" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289166" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24948454" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.32951808" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16987951" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3291239" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49939758" visible="true" weight="0.23756906" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39305446" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.15711646" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5006024" side_tool="true" weight="0.24072613" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.114575215" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3291239" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24948454" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven" order="7" weight="0.32951808" />
-    </layout-to-restore>
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Commit Test" />
-    <MESSAGE value="Rework project, new GUI, new structure base." />
-    <MESSAGE value="Continuing rework; added line method, added live preview" />
-    <MESSAGE value="Added ellipse drawing, added plotting, organised and added function documentation" />
-    <MESSAGE value="Completed implementation of all drawing functions" />
-    <MESSAGE value="Added undo / redo functionality, added file save and open functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added undo / redo functionality, added file save and open functionality" />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../TESTER.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/java/awt/event/ActionListener.java">
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/paintingTrial.java" />
-    <entry file="file://$PROJECT_DIR$/CAB302Paint.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BackEnd/Canvas1/Canvas.java" />
-    <entry file="file://$PROJECT_DIR$/BackEnd/Canvas/canvas.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/GUI/ZoomAndPanListener.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/Shapes/Circle.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/Shapes/Polygon.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/GUI/Shapes/Shapes.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/Shapes/Rectangle.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/ColourPicker/ColourPicker.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/GUI/GUI.java" />
-    <entry file="file://$PROJECT_DIR$/FrontEnd/Drawings/Circle.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Square.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Polygon.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Eraser.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/FreeDraw.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Points.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/DrawStack.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/ColourPicker.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/PaintModel.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Canvas.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/ShapesElement.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/ShapesPass.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Rectangle.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Ellipse.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Circle.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/DrawShapes.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Line.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Plot.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/Shapes.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/PolygonLine.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/Shapes/ShapesDoPass.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/j.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/GUI_OLD.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/GUI.java" />
-    <entry file="file://$PROJECT_DIR$/src/Painter/main.java" />
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/FileDrawing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="50" column="65" selection-start-line="50" selection-start-column="65" selection-end-line="50" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding>
-            <element signature="e#1583#1584#0" expanded="true" />
-            <element signature="e#1612#1613#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Line.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="40" lean-forward="true" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="478" column="38" selection-start-line="478" selection-start-column="38" selection-end-line="478" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="50" column="35" lean-forward="true" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-            <element signature="e#949#950#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1544#1545#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/UndoGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1072#1272#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="816">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Ellipse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="83" column="5" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="e#2535#2536#0" expanded="true" />
-            <element signature="e#2563#2564#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="766">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java">
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Plot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="262" column="5" lean-forward="true" selection-start-line="262" selection-start-column="5" selection-end-line="262" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5302#5303#0" expanded="true" />
-            <element signature="e#5336#5337#0" expanded="true" />
-            <element signature="e#5475#5476#0" expanded="true" />
-            <element signature="e#5508#5509#0" expanded="true" />
-            <element signature="e#5647#5648#0" expanded="true" />
-            <element signature="e#5680#5681#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="766">
+          <caret line="51" column="8" lean-forward="true" selection-start-line="51" selection-start-column="8" selection-end-line="52" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Polygon.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="45" column="76" selection-start-line="45" selection-start-column="76" selection-end-line="45" selection-end-column="76" />
+        <state relative-caret-position="596">
+          <caret line="100" column="46" lean-forward="true" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="8" lean-forward="true" selection-start-line="71" selection-start-column="8" selection-end-line="72" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/CanvasDrawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1870">
+          <caret line="298" column="28" selection-start-line="298" selection-end-line="299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/GraphicsContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="13" column="29" selection-start-line="13" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/FileDrawing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="61" selection-end-line="39" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/UndoGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/VectorTools/Shapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VectorDesign/UnitTesting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="22" lean-forward="true" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7481#7482#0" expanded="true" />
+            <element signature="e#7512#7513#0" expanded="true" />
+            <element signature="e#8226#8227#0" expanded="true" />
+            <element signature="e#8273#8274#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -680,80 +463,9 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>CAB302Paint</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

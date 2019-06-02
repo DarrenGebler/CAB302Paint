@@ -63,7 +63,7 @@ public class Line extends Shapes {
      * Creates a string for the tool name
      * @return Tool name "Line"
      */
-    public  String toString() {
+    public String toString() {
         return "Line";
     }
 

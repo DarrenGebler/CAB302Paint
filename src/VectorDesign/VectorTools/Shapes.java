@@ -12,7 +12,6 @@ public abstract class Shapes {
      * Class constructor for all shapes to extend and override upon
      * @param lineColor color of line to draw shape
      * @param fillColor color of fill to draw shape
-     * @param fill whether or not the fill color should be used when drawing shape
      */
     Shapes(Color lineColor, Color fillColor)
     {

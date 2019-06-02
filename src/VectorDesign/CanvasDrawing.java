@@ -208,6 +208,10 @@ public class CanvasDrawing extends JPanel {
         }
     }
 
+    /**
+     * Uses the FileDrawing class to export objects from a vec formatted file
+     * @param path file path to open
+     */
     public void saveFile(String path) {
         try {
             FileDrawing.fileExport(path, canvasGraphics);
@@ -289,7 +293,7 @@ public class CanvasDrawing extends JPanel {
 
     /**
      * Returns a String formatted Vector containing a list of all objects currently on the canvas
-     * @return Vector<String> of canvas object names
+     * @return Vector of canvas object names
      */
     public Vector<String> canvasObjectsToString() {
         Vector<String> objectList = new Vector<>();

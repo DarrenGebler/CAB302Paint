@@ -9,7 +9,7 @@ import VectorDesign.VectorTools.Tools;
 
 
 /**
- *
+ * GUI class containing all GUI elements, excluding canvas.
  * @author James Hassett, Darren Gebler
  */
 public class GUI extends javax.swing.JFrame {
