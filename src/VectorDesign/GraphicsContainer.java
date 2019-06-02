@@ -46,6 +46,10 @@ public class GraphicsContainer {
         objects.add(object);
     }
 
+    /**
+     * Remove a graphics object from the container for drawing to the canvas
+     * @param index index to remove
+     */
     public void removeObject(int index) {
         if (objects.size() > 0) {
             objects.remove(index);

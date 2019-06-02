@@ -31,17 +31,6 @@ public class Rectangle extends Shapes {
     }
 
     /**
-     * Creates a string to save the object to a VEC formatted file
-     * @return output The vec string
-     */
-    public String toVec() {
-        String output = toVecColor();
-        output += "RECTANGLE " + x1 + " " + y1 + " " + x2 + " " + y2 + "\n";
-
-        return output;
-    }
-
-    /**
      * Resizes the rectangle while the user draws to enable a preview
      * @param x2 drag pos x
      * @param y2 drag pos y
@@ -73,6 +62,25 @@ public class Rectangle extends Shapes {
 
         graphics.setColor(getLineColor());
         graphics.drawRect((int) x, (int) y, (int) (width * canvasSize), (int) (height * canvasSize));
+    }
+
+    /**
+     * Creates a string to save the object to a VEC formatted file
+     * @return output The vec string
+     */
+    public String toVec() {
+        String output = toVecColor();
+        output += "RECTANGLE " + x1 + " " + y1 + " " + x2 + " " + y2 + "\n";
+
+        return output;
+    }
+
+    /**
+     * Creates a string for the tool name
+     * @return Tool name "Rectangle"
+     */
+    public  String toString() {
+        return "Rectangle";
     }
 
     /**

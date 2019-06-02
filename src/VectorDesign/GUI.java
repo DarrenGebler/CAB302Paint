@@ -52,6 +52,7 @@ public class GUI extends javax.swing.JFrame {
         editMenu = new javax.swing.JMenu();
         menuUndo = new javax.swing.JMenuItem();
         menuRedo = new javax.swing.JMenuItem();
+        menuHistory = new javax.swing.JMenuItem();
 
         getContentPane().setPreferredSize(new Dimension(680,530));
 
@@ -233,6 +234,14 @@ public class GUI extends javax.swing.JFrame {
         });
         editMenu.add(menuRedo);
 
+        menuHistory.setText("History...");
+        menuHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuHistoryActionPerformed(evt);
+            }
+        });
+        editMenu.add(menuHistory);
+
         topMenuBar.add(editMenu);
 
         setJMenuBar(topMenuBar);
@@ -302,33 +311,53 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>
 
+    /* Drawing tool button listeners */
+
     /**
-     * Drawing tool button listeners
-     * @param evt
+     * Set tool to PLOT when button pressed
+     * @param evt click event
      */
     private void buttonPlotActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.setTool(Tools.PLOT);
     }
 
+    /**
+     * Set tool to LINE when button pressed
+     * @param evt click event
+     */
     private void buttonLineActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.setTool(Tools.LINE);
     }
 
+    /**
+     * Set tool to RECTANGLE when button pressed
+     * @param evt click event
+     */
     private void buttonRectangleActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.setTool(Tools.RECTANGLE);
     }
 
+    /**
+     * Set tool to ELLIPSE when button pressed
+     * @param evt click event
+     */
     private void buttonEllipseActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.setTool(Tools.ELLIPSE);
     }
 
+    /**
+     * Set tool to POLYGON when button pressed
+     * @param evt click event
+     */
     private void buttonPolygonActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.setTool(Tools.POLYGON);
     }
 
+    /* Color tool button listeners */
+
     /**
-     * Color tool button listeners
-     * @param evt
+     * Listen for button press, show a color picker dialog and save line color selection
+     * @param evt click event
      */
     private void buttonLineColActionPerformed(java.awt.event.ActionEvent evt) {
         Color colorSelection = JColorChooser.showDialog(null, "Select line colour", lineColor);
@@ -340,6 +369,10 @@ public class GUI extends javax.swing.JFrame {
         buttonLineCol.setBackground(lineColor);
     }
 
+    /**
+     * Listen for button press, show a color picker dialog and save fill color selection
+     * @param evt click event
+     */
     private void buttonFillColActionPerformed(java.awt.event.ActionEvent evt) {
         Color colorSelection = JColorChooser.showDialog(null, "Select fill colour", fillColor);
         if (colorSelection != null) {
@@ -350,15 +383,21 @@ public class GUI extends javax.swing.JFrame {
         buttonFillCol.setBackground(fillColor);
     }
 
+    /**
+     * Listen for button press and clear fill color
+     * @param evt click event
+     */
     private void buttonFillClearActionPerformed(java.awt.event.ActionEvent evt) {
         fillColor = null;
         buttonFillCol.setBackground(fillColor);
         vectorCanvas.setFillColor(fillColor);
     }
 
+    /* Menu option button listeners */
+
     /**
-     * Menu Option button listeners
-     * @param evt
+     * Listen for button press and clear canvas upon confirmation
+     * @param evt click event
      */
     private void menuNewActionPerformed(java.awt.event.ActionEvent evt) {
         int confirmResult = JOptionPane.showConfirmDialog(getContentPane(), "Are you sure you wish to clear the canvas?", "Clear the canvas...", JOptionPane.YES_NO_OPTION);
@@ -368,6 +407,10 @@ public class GUI extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Listen for button press and open file when prompted
+     * @param evt click event
+     */
     private void menuOpenActionPerformed(java.awt.event.ActionEvent evt) {
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setFileFilter(new FileNameExtensionFilter("Vector (*.vec)", "vec"));
@@ -377,6 +420,11 @@ public class GUI extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Listen for button press and save current canvas to file
+     * Allows user to choose file format
+     * @param evt click event
+     */
     private void menuSaveAsActionPerformed(java.awt.event.ActionEvent evt) {
         JFileChooser fileChooser = new JFileChooser();
 
@@ -407,14 +455,44 @@ public class GUI extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Listen for button press and undo last drawing action on event
+     * @param evt click event
+     */
     private void menuUndoActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.undo();
     }
 
+    /**
+     * Listen for button press and redo last undo action on event
+     * @param evt click event
+     */
     private void menuRedoActionPerformed(java.awt.event.ActionEvent evt) {
         vectorCanvas.redo();
     }
 
+    /**
+     * Listen for button press and opens history popup on event
+     * @param evt click event
+     */
+    private void menuHistoryActionPerformed(java.awt.event.ActionEvent evt) {
+        // Make a backup of the canvas
+        vectorCanvas.backupCanvas();
+
+        // Create the dialog
+        JDialog historyDialog = new UndoGUI(vectorCanvas);
+
+        // Position the dialog inside the parent frame
+        historyDialog.setLocationRelativeTo(getContentPane());
+
+        // Show the dialog
+        historyDialog.setVisible(true);
+    }
+
+    /**
+     * Listen for canvas resizing and make sure drawing canvas maintains aspect ratio 1:1
+     * @param evt resize event
+     */
     private void formComponentResized(java.awt.event.ComponentEvent evt) {
         vectorCanvas.canvasResize(canvasContainer.getSize());
     }
@@ -439,6 +517,7 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem menuNew;
     private javax.swing.JMenuItem menuOpen;
     private javax.swing.JMenuItem menuRedo;
+    private javax.swing.JMenuItem menuHistory;
     // private javax.swing.JMenuItem menuSave;
     private javax.swing.JMenuItem menuSaveAs;
     private javax.swing.JMenuItem menuUndo;

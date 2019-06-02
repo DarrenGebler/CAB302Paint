@@ -22,17 +22,6 @@ public class Plot extends Shapes {
     }
 
     /**
-     * Creates a string to save the object to a VEC formatted file
-     * @return output The vec string
-     */
-    public String toVec() {
-        String output = "PEN #" + Integer.toHexString(getLineColor().getRGB()).substring(2) + "\n";
-        output += "PLOT " + x + " " + y + "\n";
-
-        return output;
-    }
-
-    /**
      * Move the plot to the new position
      * @param x drag pos x
      * @param y drag pos y
@@ -53,6 +42,25 @@ public class Plot extends Shapes {
     public void draw(Graphics graphics, int canvasSize) {
         graphics.setColor(getLineColor());
         graphics.drawLine((int)((x) * canvasSize), (int)((y) * canvasSize), (int)((x) * canvasSize), (int)((y) * canvasSize));
+    }
+
+    /**
+     * Creates a string to save the object to a VEC formatted file
+     * @return output The vec string
+     */
+    public String toVec() {
+        String output = "PEN #" + Integer.toHexString(getLineColor().getRGB()).substring(2) + "\n";
+        output += "PLOT " + x + " " + y + "\n";
+
+        return output;
+    }
+
+    /**
+     * Creates a string for the tool name
+     * @return Tool name "Plot"
+     */
+    public  String toString() {
+        return "Plot";
     }
 
     /**

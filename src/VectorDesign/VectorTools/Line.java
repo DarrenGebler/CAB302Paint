@@ -26,17 +26,6 @@ public class Line extends Shapes {
     }
 
     /**
-     * Creates a string to save the object to a VEC formatted file
-     * @return output The vec string
-     */
-    public String toVec() {
-        String output = "PEN #" + Integer.toHexString(getLineColor().getRGB()).substring(2) + "\n";
-        output += "LINE " + x1 + " " + y1 + " " + x2 + " " + y2 + "\n";
-
-        return output;
-    }
-
-    /**
      * Resizes the line while the user draws to enable a preview
      * @param x2 drag pos x
      * @param y2 drag pos y
@@ -57,6 +46,25 @@ public class Line extends Shapes {
     public void draw(Graphics graphics, int canvasSize) {
         graphics.setColor(getLineColor());
         graphics.drawLine((int)((x1) * canvasSize), (int)((y1) * canvasSize), (int)((x2) * canvasSize), (int)((y2) * canvasSize));
+    }
+
+    /**
+     * Creates a string to save the object to a VEC formatted file
+     * @return output The vec string
+     */
+    public String toVec() {
+        String output = "PEN #" + Integer.toHexString(getLineColor().getRGB()).substring(2) + "\n";
+        output += "LINE " + x1 + " " + y1 + " " + x2 + " " + y2 + "\n";
+
+        return output;
+    }
+
+    /**
+     * Creates a string for the tool name
+     * @return Tool name "Line"
+     */
+    public  String toString() {
+        return "Line";
     }
 
     /**

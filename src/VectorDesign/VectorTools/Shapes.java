@@ -37,6 +37,20 @@ public abstract class Shapes {
     }
 
     /**
+     * Allows resizing and preview of an object being drawn by changing the end coordinates
+     * @param x2
+     * @param y2
+     */
+    public abstract void preview(double x2, double y2);
+
+    /**
+     * Base abstract function for shape drawing
+     * @param graphics graphics panel to draw to
+     * @param canvasSize size of canvas in pixels, used for scaling the graphics
+     */
+    public abstract void draw(Graphics graphics, int canvasSize);
+
+    /**
      * Used for objects that can take a fill color
      * Sets the pen color and then either sets the fill color or removes it
      * @return output The vec formatted output
@@ -60,6 +74,12 @@ public abstract class Shapes {
     public abstract String toVec();
 
     /**
+     * Creates a string for undo history support
+     * @return
+     */
+    public abstract  String toString();
+
+    /**
      * Used exclusively for polygon creation, add's a vertex and closes polygon if the new vertex is
      * close to the starting point
      * @param x2 x position of new vertex
@@ -67,18 +87,4 @@ public abstract class Shapes {
      * @return true if polygon is closed as a result of adding point
      */
     public abstract boolean addVertex(double x2, double y2);
-
-    /**
-     * Allows resizing and preview of an object being drawn by changing the end coordinates
-     * @param x2
-     * @param y2
-     */
-    public abstract void preview(double x2, double y2);
-
-    /**
-     * Base abstract function for shape drawing
-     * @param graphics graphics panel to draw to
-     * @param canvasSize size of canvas in pixels, used for scaling the graphics
-     */
-    public abstract void draw(Graphics graphics, int canvasSize);
 }

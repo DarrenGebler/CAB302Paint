@@ -42,8 +42,8 @@ public class Polygon extends Shapes {
      */
     public boolean addVertex(double x2, double y2) {
         finished = false;
-        if ((x2 < xPoints.get(0) + 0.03 && x2 > xPoints.get(0) - 0.03)
-                && (y2 < yPoints.get(0) + 0.03 && y2 > yPoints.get(0) - 0.03)) {
+        if ((x2 < xPoints.get(0) + 0.01 && x2 > xPoints.get(0) - 0.01)
+                && (y2 < yPoints.get(0) + 0.01 && y2 > yPoints.get(0) - 0.01)) {
             // Remove last point as it will be completed automatically
             xPoints.remove(xPoints.size() - 1);
             yPoints.remove(yPoints.size() - 1);
@@ -121,5 +121,13 @@ public class Polygon extends Shapes {
         output += "\n";
 
         return output;
+    }
+
+    /**
+     * Creates a string for the tool name
+     * @return Tool name "Polygon"
+     */
+    public  String toString() {
+        return "Polygon";
     }
 }

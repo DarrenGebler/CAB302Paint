@@ -6,6 +6,9 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 import VectorDesign.VectorTools.*;
 import VectorDesign.VectorTools.Polygon;
@@ -22,18 +25,21 @@ public class CanvasDrawing extends JPanel {
     private Shapes currentObject;
 
     // All shapes stored in the canvasGraphics object
-    private GraphicsContainer canvasGraphics = new GraphicsContainer(498);
+    private GraphicsContainer canvasGraphics;
 
-    // List to save undo history to
-    private GraphicsContainer undoHistory = new GraphicsContainer(498);
+    // List to save undo history to (for redo use)
+    private GraphicsContainer undoHistory;
+
+    // Backup canvas for history support
+    private List<Shapes> canvasBackup;
 
     // Mouse position
     private Point clickPos;
     private Point mousePos;
 
     // Tool properties
-    private Tools currentTool = Tools.PLOT;
-    private Color lineColor = new Color(0,0,0);
+    private Tools currentTool;
+    private Color lineColor;
     private Color fillColor;
     private boolean polygonComplete;
 
@@ -42,12 +48,18 @@ public class CanvasDrawing extends JPanel {
      * @param gui takes the gui object for use in resizing and event listening
      */
     public CanvasDrawing(GUI gui) {
+        // Setup GUI
         this.gui = gui;
         this.setBackground(Color.WHITE);
         this.setCursor(new java.awt.Cursor(java.awt.Cursor.CROSSHAIR_CURSOR));
         this.setPreferredSize(new Dimension(498,498));
 
-        canvasGraphics.setSize(498);
+        // Setup initial vars
+        canvasGraphics = new GraphicsContainer(498);
+        undoHistory = new GraphicsContainer(498);
+        canvasBackup = new ArrayList<Shapes>();
+        currentTool = Tools.PLOT;
+        lineColor = new Color(0, 0, 0);
 
 
         /**
@@ -98,6 +110,11 @@ public class CanvasDrawing extends JPanel {
                 if (currentTool != Tools.POLYGON || polygonComplete) {
                     // Add new object to canvas container
                     canvasGraphics.addObject(currentObject);
+
+                    // Clear redo ability (matches photoshop functionality)
+                    if (undoHistory.getObjects().size() > 0) {
+                        undoHistory.getObjects().removeAll(undoHistory.getObjects());
+                    }
 
                     // Clear storage
                     currentObject = null;
@@ -228,6 +245,60 @@ public class CanvasDrawing extends JPanel {
             undoHistory.removeObject(undoHistory.getObjects().size() - 1);
             repaint();
         }
+    }
+
+    /**
+     * Write all objects on the canvas to a list for use in file history
+     */
+    public void backupCanvas() {
+        // Clear array
+        if (canvasBackup.size() > 0) {
+            canvasBackup.removeAll(canvasBackup);
+        }
+
+        // Add all current objects to the backup
+        for (Shapes object : canvasGraphics.getObjects()) {
+            canvasBackup.add(object);
+        }
+    }
+
+    /**
+     * Controls history display on the canvas when the user intereacts with the UndoGUI
+     * @param index index of object to revert to
+     * @param action "preview" - User is only previewing, don't clear redo history
+     *               "save" - User wants to revert so clear objects and redo history
+     *               "cancel" - User cancelled so bring the canvas back to where it was
+     */
+    public void canvasHistoryControl(int index, String action) {
+        if (action.equals("preview")) {
+            canvasGraphics.getObjects().removeAll(canvasGraphics.getObjects());
+        } else if (action.equals("save")) {
+            canvasClear();
+        } else if (action.equals("cancel")) {
+            canvasGraphics.getObjects().removeAll(canvasGraphics.getObjects());
+
+            index = canvasBackup.size() - 1;
+        }
+
+        // Add objects to canvas
+        for (int i = 0; i < index + 1; i++) {
+            canvasGraphics.addObject(canvasBackup.get(i));
+        }
+        repaint();
+    }
+
+    /**
+     * Returns a String formatted Vector containing a list of all objects currently on the canvas
+     * @return Vector<String> of canvas object names
+     */
+    public Vector<String> canvasObjectsToString() {
+        Vector<String> objectList = new Vector<>();
+
+        for (int i=0; i<canvasGraphics.getObjects().size(); i++) {
+            objectList.add(canvasGraphics.getObjects().get(i).toString());
+        }
+
+        return objectList;
     }
 
     /**
